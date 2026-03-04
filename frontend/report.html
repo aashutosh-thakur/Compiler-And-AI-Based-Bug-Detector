@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report Viewer – Compiler Based AI Bug Detector</title>
+    <meta name="description"
+        content="View your AI-enhanced security analysis report with OWASP mapping and risk scoring." />
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar__brand">
+                <img src="assets/logo.svg" alt="logo" />
+                <span>Compiler Based<span class="text-gradient"> AI Bug Detector</span></span>
+            </a>
+            <ul class="navbar__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="upload.html">Analyze</a></li>
+                <li><a href="report.html" class="active">Reports</a></li>
+                <li><a href="https://github.com/aashutosh-thakur/Compiler-Based-AI-Bug-Detector" target="_blank"
+                        rel="noopener">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== Report Header ===== -->
+    <section class="section">
+        <div class="container">
+
+            <!-- Job ID input -->
+            <div class="card mb-lg" id="report-lookup">
+                <h2 class="card__title mb-md">📄 View Report</h2>
+                <div class="flex gap-md items-center">
+                    <input type="text" id="input-job-id" placeholder="Enter Job ID…"
+                        style="flex:1; padding:0.6rem 1rem; border-radius:var(--radius-md); border:1px solid var(--border-subtle); background:var(--bg-secondary); color:var(--text-primary); font-family:var(--font-mono); font-size:0.9rem;" />
+                    <button class="btn btn-primary" id="btn-load-report">Load Report</button>
+                </div>
+            </div>
+
+            <!-- Report content (hidden until loaded) -->
+            <div id="report-content" class="hidden">
+
+                <!-- Risk Score -->
+                <div class="card mb-lg text-center">
+                    <h3 class="card__title mb-md">Risk Score</h3>
+                    <div class="risk-gauge risk-gauge--secure" id="risk-gauge" style="--gauge-pct:85%;">
+                        <div class="flex flex-col items-center justify-center">
+                            <span class="risk-gauge__value" id="risk-value">—</span>
+                            <span class="risk-gauge__label">/ 100</span>
+                        </div>
+                    </div>
+                    <p class="mt-md">
+                        <span class="badge badge--success" id="risk-badge">Secure</span>
+                    </p>
+                </div>
+
+                <!-- File info -->
+                <div class="card mb-lg">
+                    <h3 class="card__title mb-md">📁 File Information</h3>
+                    <div class="flex gap-lg" style="flex-wrap:wrap;">
+                        <div><span class="text-muted">File:</span> <strong id="report-file">—</strong></div>
+                        <div><span class="text-muted">Language:</span> <strong id="report-lang">—</strong></div>
+                        <div><span class="text-muted">Job ID:</span> <code id="report-job-id">—</code></div>
+                    </div>
+                </div>
+
+                <!-- OWASP Summary -->
+                <div class="card mb-lg">
+                    <h3 class="card__title mb-md">🛡️ OWASP Top 10 Summary</h3>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>OWASP Category</th>
+                                    <th>Count</th>
+                                    <th>Severity Breakdown</th>
+                                </tr>
+                            </thead>
+                            <tbody id="owasp-table-body">
+                                <tr>
+                                    <td colspan="3" class="text-muted text-center">No data loaded</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Detailed Findings -->
+                <div class="card mb-lg">
+                    <h3 class="card__title mb-md">🔍 Detailed Findings</h3>
+                    <div id="findings-list">
+                        <p class="text-muted">No findings to display.</p>
+                    </div>
+                </div>
+
+                <!-- Download -->
+                <div class="flex justify-center gap-md mt-xl mb-lg">
+                    <a class="btn btn-primary btn-lg" id="btn-download-docx" href="#" download>
+                        ⬇️ Download .docx Report
+                    </a>
+                    <a class="btn btn-secondary btn-lg" id="btn-download-json" href="#" download>
+                        ⬇️ Download JSON
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Compiler Based AI Bug Detector</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/reportViewer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload &amp; Analyze – Compiler Based AI Bug Detector</title>
+    <meta name="description"
+        content="Upload your C/C++ or Python source files for AI-enhanced static analysis and vulnerability detection." />
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar__brand">
+                <img src="assets/logo.svg" alt="logo" />
+                <span>Compiler Based<span class="text-gradient"> AI Bug Detector</span></span>
+            </a>
+            <ul class="navbar__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="upload.html" class="active">Analyze</a></li>
+                <li><a href="report.html">Reports</a></li>
+                <li><a href="https://github.com/aashutosh-thakur/Compiler-Based-AI-Bug-Detector" target="_blank"
+                        rel="noopener">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== Upload Section ===== -->
+    <section class="section">
+        <div class="container" style="max-width:720px;">
+            <h1 class="text-center mb-lg">
+                Upload <span class="text-gradient">Source Code</span>
+            </h1>
+            <p class="text-center text-muted mb-lg">
+                Supported file types: <code>.c</code>, <code>.cpp</code>, <code>.h</code>, <code>.py</code>
+            </p>
+
+            <!-- Drop zone -->
+            <div class="upload-zone" id="upload-zone">
+                <div class="upload-zone__icon">📁</div>
+                <p class="upload-zone__text">Drag &amp; drop your file here</p>
+                <p class="upload-zone__hint">or click to browse &middot; Max 2 MB</p>
+                <input type="file" id="file-input" accept=".c,.cpp,.h,.py" hidden />
+            </div>
+
+            <!-- Selected file info -->
+            <div id="file-info" class="card mt-lg hidden">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="card__title" id="file-name">—</p>
+                        <p class="card__subtitle" id="file-meta">—</p>
+                    </div>
+                    <button class="btn btn-secondary btn-sm" id="btn-clear">✕ Remove</button>
+                </div>
+            </div>
+
+            <!-- Upload progress -->
+            <div id="upload-progress" class="mt-lg hidden">
+                <div class="flex justify-between items-center mb-md">
+                    <span class="text-muted">Uploading…</span>
+                    <span id="progress-pct" class="font-mono">0%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress__bar" id="progress-bar"></div>
+                </div>
+            </div>
+
+            <!-- Analysis status -->
+            <div id="analysis-status" class="card mt-lg hidden">
+                <div class="flex items-center gap-md">
+                    <div class="spinner"></div>
+                    <div>
+                        <p class="card__title">Analyzing…</p>
+                        <p class="card__subtitle" id="status-text">Running compiler and static analysis tools…</p>
+                    </div>
+                </div>
+                <p class="text-muted mt-md font-mono" id="job-id-display">Job ID: —</p>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="flex justify-center gap-md mt-xl">
+                <button class="btn btn-primary btn-lg" id="btn-upload" disabled>
+                    🚀 Start Analysis
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Compiler Based AI Bug Detector</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/upload.js"></script>
+</body>
+
+</html>

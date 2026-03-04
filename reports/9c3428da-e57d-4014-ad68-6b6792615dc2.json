@@ -1,0 +1,8 @@
+{
+  "job_id": "9c3428da-e57d-4014-ad68-6b6792615dc2",
+  "file": "9c3428da-e57d-4014-ad68-6b6792615dc2.c",
+  "language": "c",
+  "findings": [],
+  "risk_score": 100,
+  "risk_grade": "Secure"
+}

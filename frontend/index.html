@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compiler Based AI Bug Detector – AI-Driven Vulnerability Analysis</title>
+  <meta name="description"
+    content="Advancing Automated Vulnerability Detection: Enhancing Traditional Compiler-Based Static Analysis Using AI-Driven Contextual Severity Classification." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar__brand">
+        <img src="assets/logo.svg" alt="AI Bug Detector logo" />
+        <span>Compiler Based<span class="text-gradient"> AI Bug Detector</span></span>
+      </a>
+      <ul class="navbar__links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="upload.html">Analyze</a></li>
+        <li><a href="report.html">Reports</a></li>
+        <li><a href="https://github.com/aashutosh-thakur/Compiler-Based-AI-Bug-Detector" target="_blank"
+            rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <header class="hero section">
+    <div class="container">
+      <span class="hero__badge">🛡️ AI-Powered Security Analysis</span>
+      <h1 class="hero__title">
+        Find Bugs <span class="text-gradient">Before They Ship</span>
+      </h1>
+      <p class="hero__subtitle">
+        Upload your C/C++ or Python source code and receive an AI-enhanced vulnerability report
+        with OWASP Top 10 mapping, contextual severity classification, and actionable remediation.
+      </p>
+      <div class="hero__actions">
+        <a href="upload.html" class="btn btn-primary btn-lg" id="cta-upload">
+          🚀 Start Analysis
+        </a>
+        <a href="#features" class="btn btn-secondary btn-lg">
+          Learn More ↓
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Features ===== -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2 class="text-center mb-lg">How It <span class="text-gradient">Works</span></h2>
+      <div class="features">
+
+        <div class="card">
+          <div class="feature-icon">📤</div>
+          <h3 class="card__title">Upload Source Code</h3>
+          <p class="card__subtitle">
+            Drag &amp; drop your <code>.c</code>, <code>.cpp</code>, or <code>.py</code> files. The
+            system auto-detects the language and selects the right analysis tools.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="feature-icon">⚙️</div>
+          <h3 class="card__title">Compiler + SAST Scan</h3>
+          <p class="card__subtitle">
+            GCC, Cppcheck, Pylint, and Bandit run in parallel inside sandboxed containers.
+            Outputs are normalized into a canonical JSON schema.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="feature-icon">🤖</div>
+          <h3 class="card__title">AI Classification</h3>
+          <p class="card__subtitle">
+            An LLM-based severity classifier filters false positives (up to 98%), adjusts
+            severity based on code context, and generates human-readable explanations.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="feature-icon">📊</div>
+          <h3 class="card__title">Risk Score &amp; OWASP Map</h3>
+          <p class="card__subtitle">
+            A weighted deduction formula produces a 0–100 risk score. Findings are
+            automatically mapped to OWASP Top 10 categories via CWE cross-references.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="feature-icon">📝</div>
+          <h3 class="card__title">.docx Report</h3>
+          <p class="card__subtitle">
+            Download a professional security assessment with cover page, summary table,
+            detailed findings, code snippets, and AI remediation strategies.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="feature-icon">🔒</div>
+          <h3 class="card__title">Secure Sandbox</h3>
+          <p class="card__subtitle">
+            All analysis runs in isolated MicroVM/gVisor sandboxes with no network, strict
+            resource limits, and ephemeral filesystems—defense in depth.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Tool Stack ===== -->
+  <section class="section" id="tools">
+    <div class="container">
+      <h2 class="text-center mb-lg">Analysis <span class="text-gradient">Stack</span></h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Tool</th>
+              <th>Language</th>
+              <th>Focus</th>
+              <th>Technique</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>GCC</strong></td>
+              <td>C / C++</td>
+              <td>Compilation &amp; Warnings</td>
+              <td>Lexical + Syntax + Semantic Analysis</td>
+            </tr>
+            <tr>
+              <td><strong>Cppcheck</strong></td>
+              <td>C / C++</td>
+              <td>Memory &amp; Undefined Behavior</td>
+              <td>Intraprocedural Data-Flow</td>
+            </tr>
+            <tr>
+              <td><strong>Pylint</strong></td>
+              <td>Python</td>
+              <td>Code Quality &amp; Smells</td>
+              <td>AST Traversal + Heuristics</td>
+            </tr>
+            <tr>
+              <td><strong>Bandit</strong></td>
+              <td>Python</td>
+              <td>Security Vulnerabilities</td>
+              <td>AST Node Visiting + Pattern Matching</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Compiler Based AI Bug Detector &middot; Academic Research Project &middot;
+        <a href="https://github.com/aashutosh-thakur/Compiler-Based-AI-Bug-Detector">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,541 @@
+2026-03-04 19:19:07 [INFO] Bull queue connected to Redis
+2026-03-04 19:19:07 [INFO] AI Bug Detection server running on http://localhost:3000
+2026-03-04 19:19:18 [INFO] GET /
+2026-03-04 19:19:18 [INFO] GET /css/style.css
+2026-03-04 19:19:18 [INFO] GET /assets/logo.svg
+2026-03-04 19:19:18 [INFO] GET /js/main.js
+2026-03-04 19:19:18 [INFO] GET /assets/logo.svg
+2026-03-04 19:19:23 [INFO] GET /upload.html
+2026-03-04 19:19:23 [INFO] GET /css/style.css
+2026-03-04 19:19:23 [INFO] GET /assets/logo.svg
+2026-03-04 19:19:23 [INFO] GET /js/main.js
+2026-03-04 19:19:23 [INFO] GET /js/upload.js
+2026-03-04 19:19:51 [INFO] POST /api/upload
+2026-03-04 19:20:06 [INFO] GET /report.html
+2026-03-04 19:20:06 [INFO] GET /css/style.css
+2026-03-04 19:20:06 [INFO] GET /js/main.js
+2026-03-04 19:20:06 [INFO] GET /assets/logo.svg
+2026-03-04 19:20:06 [INFO] GET /js/reportViewer.js
+2026-03-04 19:20:11 [INFO] GET /upload.html
+2026-03-04 19:20:11 [INFO] GET /css/style.css
+2026-03-04 19:20:11 [INFO] GET /assets/logo.svg
+2026-03-04 19:20:11 [INFO] GET /js/main.js
+2026-03-04 19:20:11 [INFO] GET /js/upload.js
+2026-03-04 19:20:20 [INFO] POST /api/upload
+2026-03-04 19:20:41 [INFO] GET /report.html
+2026-03-04 19:20:41 [INFO] GET /css/style.css
+2026-03-04 19:20:41 [INFO] GET /assets/logo.svg
+2026-03-04 19:20:41 [INFO] GET /js/main.js
+2026-03-04 19:20:41 [INFO] GET /js/reportViewer.js
+2026-03-04 19:20:49 [INFO] GET /upload.html
+2026-03-04 19:20:49 [INFO] GET /css/style.css
+2026-03-04 19:20:49 [INFO] GET /assets/logo.svg
+2026-03-04 19:20:49 [INFO] GET /js/main.js
+2026-03-04 19:20:49 [INFO] GET /js/upload.js
+2026-03-04 19:20:51 [INFO] GET /index.html
+2026-03-04 19:20:51 [INFO] GET /css/style.css
+2026-03-04 19:20:51 [INFO] GET /assets/logo.svg
+2026-03-04 19:20:51 [INFO] GET /js/main.js
+2026-03-04 19:20:52 [INFO] GET /report.html
+2026-03-04 19:20:52 [INFO] GET /css/style.css
+2026-03-04 19:20:52 [INFO] GET /assets/logo.svg
+2026-03-04 19:20:52 [INFO] GET /js/main.js
+2026-03-04 19:20:52 [INFO] GET /js/reportViewer.js
+2026-03-04 19:20:54 [INFO] GET /index.html
+2026-03-04 19:20:54 [INFO] GET /css/style.css
+2026-03-04 19:20:54 [INFO] GET /assets/logo.svg
+2026-03-04 19:20:54 [INFO] GET /js/main.js
+2026-03-04 19:21:03 [INFO] GET /
+2026-03-04 19:21:03 [INFO] GET /css/style.css
+2026-03-04 19:21:03 [INFO] GET /assets/logo.svg
+2026-03-04 19:21:03 [INFO] GET /js/main.js
+2026-03-04 19:21:04 [INFO] GET /assets/logo.svg
+2026-03-04 19:21:08 [INFO] GET /upload.html
+2026-03-04 19:21:08 [INFO] GET /css/style.css
+2026-03-04 19:21:08 [INFO] GET /js/upload.js
+2026-03-04 19:21:08 [INFO] GET /assets/logo.svg
+2026-03-04 19:21:08 [INFO] GET /js/main.js
+2026-03-04 19:21:14 [INFO] GET /index.html
+2026-03-04 19:21:14 [INFO] GET /css/style.css
+2026-03-04 19:21:14 [INFO] GET /assets/logo.svg
+2026-03-04 19:21:14 [INFO] GET /js/main.js
+2026-03-04 19:21:14 [INFO] GET /assets/logo.svg
+2026-03-04 19:21:16 [INFO] GET /upload.html
+2026-03-04 19:21:16 [INFO] GET /css/style.css
+2026-03-04 19:21:16 [INFO] GET /assets/logo.svg
+2026-03-04 19:21:16 [INFO] GET /js/main.js
+2026-03-04 19:21:16 [INFO] GET /js/upload.js
+2026-03-04 19:21:21 [INFO] POST /api/upload
+2026-03-04 19:21:23 [INFO] GET /index.html
+2026-03-04 19:21:23 [INFO] GET /css/style.css
+2026-03-04 19:21:23 [INFO] GET /assets/logo.svg
+2026-03-04 19:21:23 [INFO] GET /js/main.js
+2026-03-04 19:21:25 [INFO] GET /index.html
+2026-03-04 19:21:25 [INFO] GET /css/style.css
+2026-03-04 19:21:25 [INFO] GET /assets/logo.svg
+2026-03-04 19:21:25 [INFO] GET /js/main.js
+2026-03-04 19:21:31 [INFO] GET /upload.html
+2026-03-04 19:21:31 [INFO] GET /css/style.css
+2026-03-04 19:21:31 [INFO] GET /assets/logo.svg
+2026-03-04 19:21:31 [INFO] GET /js/main.js
+2026-03-04 19:21:31 [INFO] GET /js/upload.js
+2026-03-04 19:21:37 [INFO] POST /api/upload
+2026-03-04 19:21:39 [INFO] GET /report.html
+2026-03-04 19:21:39 [INFO] GET /css/style.css
+2026-03-04 19:21:39 [INFO] GET /assets/logo.svg
+2026-03-04 19:21:39 [INFO] GET /js/main.js
+2026-03-04 19:21:39 [INFO] GET /js/reportViewer.js
+2026-03-04 19:21:40 [INFO] GET /index.html
+2026-03-04 19:21:40 [INFO] GET /css/style.css
+2026-03-04 19:21:40 [INFO] GET /assets/logo.svg
+2026-03-04 19:21:40 [INFO] GET /js/main.js
+2026-03-04 19:22:36 [INFO] GET /index.html
+2026-03-04 19:22:36 [INFO] GET /css/style.css
+2026-03-04 19:22:36 [INFO] GET /assets/logo.svg
+2026-03-04 19:22:36 [INFO] GET /js/main.js
+2026-03-04 19:22:36 [INFO] GET /assets/logo.svg
+2026-03-04 19:22:37 [INFO] GET /upload.html
+2026-03-04 19:22:37 [INFO] GET /css/style.css
+2026-03-04 19:22:37 [INFO] GET /assets/logo.svg
+2026-03-04 19:22:37 [INFO] GET /js/main.js
+2026-03-04 19:22:37 [INFO] GET /js/upload.js
+2026-03-04 19:22:42 [INFO] POST /api/upload
+2026-03-04 19:23:00 [ERROR] Upload error: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.
+2026-03-04 19:23:00 [ERROR] Upload error: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.
+2026-03-04 19:23:00 [ERROR] Upload error: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.
+2026-03-04 19:23:00 [ERROR] Upload error: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.
+2026-03-04 19:23:00 [ERROR] Upload error: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.
+2026-03-04 19:23:05 [INFO] GET /upload.html
+2026-03-04 19:23:05 [INFO] GET /css/style.css
+2026-03-04 19:23:05 [INFO] GET /assets/logo.svg
+2026-03-04 19:23:05 [INFO] GET /js/main.js
+2026-03-04 19:23:05 [INFO] GET /js/upload.js
+2026-03-04 19:23:05 [INFO] GET /assets/logo.svg
+2026-03-04 19:23:11 [INFO] POST /api/upload
+2026-03-04 19:23:23 [INFO] GET /upload.html
+2026-03-04 19:23:23 [INFO] GET /css/style.css
+2026-03-04 19:23:23 [INFO] GET /assets/logo.svg
+2026-03-04 19:23:23 [INFO] GET /js/main.js
+2026-03-04 19:23:23 [INFO] GET /js/upload.js
+2026-03-04 19:23:37 [INFO] POST /api/upload
+2026-03-04 19:24:10 [INFO] GET /report.html
+2026-03-04 19:24:10 [INFO] GET /css/style.css
+2026-03-04 19:24:10 [INFO] GET /assets/logo.svg
+2026-03-04 19:24:10 [INFO] GET /js/main.js
+2026-03-04 19:24:10 [INFO] GET /js/reportViewer.js
+2026-03-04 19:24:17 [INFO] GET /api/report/1
+2026-03-04 19:25:18 [INFO] GET /upload.html
+2026-03-04 19:25:18 [INFO] GET /css/style.css
+2026-03-04 19:25:18 [INFO] GET /assets/logo.svg
+2026-03-04 19:25:18 [INFO] GET /js/main.js
+2026-03-04 19:25:18 [INFO] GET /js/upload.js
+2026-03-04 19:25:35 [INFO] POST /api/upload
+2026-03-04 19:27:10 [INFO] GET /upload.html
+2026-03-04 19:27:10 [INFO] GET /css/style.css
+2026-03-04 19:27:10 [INFO] GET /js/main.js
+2026-03-04 19:27:10 [INFO] GET /assets/logo.svg
+2026-03-04 19:27:10 [INFO] GET /js/upload.js
+2026-03-04 19:27:10 [INFO] GET /assets/logo.svg
+2026-03-04 19:27:11 [INFO] GET /upload.html
+2026-03-04 19:27:11 [INFO] GET /css/style.css
+2026-03-04 19:27:11 [INFO] GET /assets/logo.svg
+2026-03-04 19:27:11 [INFO] GET /js/main.js
+2026-03-04 19:27:11 [INFO] GET /js/upload.js
+2026-03-04 19:27:11 [INFO] GET /assets/logo.svg
+2026-03-04 19:27:11 [INFO] GET /upload.html
+2026-03-04 19:27:11 [INFO] GET /css/style.css
+2026-03-04 19:27:11 [INFO] GET /assets/logo.svg
+2026-03-04 19:27:11 [INFO] GET /js/main.js
+2026-03-04 19:27:11 [INFO] GET /js/upload.js
+2026-03-04 19:27:12 [INFO] GET /assets/logo.svg
+2026-03-04 19:27:12 [INFO] GET /upload.html
+2026-03-04 19:27:12 [INFO] GET /css/style.css
+2026-03-04 19:27:12 [INFO] GET /assets/logo.svg
+2026-03-04 19:27:12 [INFO] GET /js/main.js
+2026-03-04 19:27:12 [INFO] GET /js/upload.js
+2026-03-04 19:27:12 [INFO] GET /assets/logo.svg
+2026-03-04 19:27:12 [INFO] GET /upload.html
+2026-03-04 19:27:12 [INFO] GET /css/style.css
+2026-03-04 19:27:12 [INFO] GET /assets/logo.svg
+2026-03-04 19:27:12 [INFO] GET /js/main.js
+2026-03-04 19:27:12 [INFO] GET /js/upload.js
+2026-03-04 19:27:12 [INFO] GET /assets/logo.svg
+2026-03-04 19:27:26 [INFO] GET /upload.html
+2026-03-04 19:27:26 [INFO] GET /css/style.css
+2026-03-04 19:27:26 [INFO] GET /assets/logo.svg
+2026-03-04 19:27:26 [INFO] GET /js/main.js
+2026-03-04 19:27:26 [INFO] GET /js/upload.js
+2026-03-04 19:27:26 [INFO] GET /assets/logo.svg
+2026-03-04 19:27:31 [INFO] POST /api/upload
+2026-03-04 19:28:12 [INFO] Running with in-memory job queue (set USE_REDIS=true to enable Redis)
+2026-03-04 19:28:12 [INFO] AI Bug Detection server running on http://localhost:3000
+2026-03-04 19:28:12 [INFO] POST /api/upload
+2026-03-04 19:28:12 [INFO] Job enqueued: 6556f6a2-78dc-48a2-902d-d0fcd08e4baf (p3_1.c, c)
+2026-03-04 19:28:12 [INFO] [6556f6a2-78dc-48a2-902d-d0fcd08e4baf] Starting analysis (c)
+2026-03-04 19:28:12 [INFO] [Sandbox] Running: gcc -Wall -Wextra -Wpedantic -fsyntax-only -fanalyzer C:\Users\thaku\Downloads\Project\uploads\6556f6a2-78dc-48a2-902d-d0fcd08e4baf.c
+2026-03-04 19:28:12 [INFO] [Sandbox] Running: cppcheck --enable=all --inconclusive --force --xml --xml-version=2 C:\Users\thaku\Downloads\Project\uploads\6556f6a2-78dc-48a2-902d-d0fcd08e4baf.c
+2026-03-04 19:28:12 [ERROR] [Sandbox] Process error: spawn gcc ENOENT
+2026-03-04 19:28:12 [ERROR] [Sandbox] Process error: spawn cppcheck ENOENT
+2026-03-04 19:28:12 [ERROR] GCC execution failed: spawn gcc ENOENT
+2026-03-04 19:28:12 [ERROR] Cppcheck execution failed: spawn cppcheck ENOENT
+2026-03-04 19:28:12 [INFO] [Sandbox] Command exited with code -4058
+2026-03-04 19:28:12 [INFO] [Sandbox] Command exited with code -4058
+2026-03-04 19:28:12 [INFO] [6556f6a2-78dc-48a2-902d-d0fcd08e4baf] Analysis complete – Risk Score: 100
+2026-03-04 19:28:12 [INFO] Report saved: C:\Users\thaku\Downloads\Project\reports\6556f6a2-78dc-48a2-902d-d0fcd08e4baf.json
+2026-03-04 19:28:12 [INFO] [InMemory] Job 6556f6a2-78dc-48a2-902d-d0fcd08e4baf completed successfully
+2026-03-04 19:28:14 [INFO] GET /api/status/6556f6a2-78dc-48a2-902d-d0fcd08e4baf
+2026-03-04 19:28:16 [INFO] GET /report.html?jobId=6556f6a2-78dc-48a2-902d-d0fcd08e4baf
+2026-03-04 19:28:16 [INFO] GET /css/style.css
+2026-03-04 19:28:16 [INFO] GET /assets/logo.svg
+2026-03-04 19:28:16 [INFO] GET /js/main.js
+2026-03-04 19:28:16 [INFO] GET /js/reportViewer.js
+2026-03-04 19:28:16 [INFO] GET /api/report/6556f6a2-78dc-48a2-902d-d0fcd08e4baf
+2026-03-04 19:28:18 [INFO] POST /api/upload
+2026-03-04 19:28:18 [INFO] Job enqueued: be683319-58af-47a7-8944-4fd4cd74cde3 (p3_1.c, c)
+2026-03-04 19:28:18 [INFO] [be683319-58af-47a7-8944-4fd4cd74cde3] Starting analysis (c)
+2026-03-04 19:28:18 [INFO] [Sandbox] Running: gcc -Wall -Wextra -Wpedantic -fsyntax-only -fanalyzer C:\Users\thaku\Downloads\Project\uploads\be683319-58af-47a7-8944-4fd4cd74cde3.c
+2026-03-04 19:28:18 [INFO] [Sandbox] Running: cppcheck --enable=all --inconclusive --force --xml --xml-version=2 C:\Users\thaku\Downloads\Project\uploads\be683319-58af-47a7-8944-4fd4cd74cde3.c
+2026-03-04 19:28:18 [ERROR] [Sandbox] Process error: spawn gcc ENOENT
+2026-03-04 19:28:18 [ERROR] [Sandbox] Process error: spawn cppcheck ENOENT
+2026-03-04 19:28:18 [ERROR] GCC execution failed: spawn gcc ENOENT
+2026-03-04 19:28:18 [ERROR] Cppcheck execution failed: spawn cppcheck ENOENT
+2026-03-04 19:28:18 [INFO] [Sandbox] Command exited with code -4058
+2026-03-04 19:28:18 [INFO] [Sandbox] Command exited with code -4058
+2026-03-04 19:28:18 [INFO] [be683319-58af-47a7-8944-4fd4cd74cde3] Analysis complete – Risk Score: 100
+2026-03-04 19:28:18 [INFO] Report saved: C:\Users\thaku\Downloads\Project\reports\be683319-58af-47a7-8944-4fd4cd74cde3.json
+2026-03-04 19:28:18 [INFO] [InMemory] Job be683319-58af-47a7-8944-4fd4cd74cde3 completed successfully
+2026-03-04 19:28:20 [INFO] GET /api/status/be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:28:21 [INFO] GET /report.html?jobId=be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:28:21 [INFO] GET /css/style.css
+2026-03-04 19:28:21 [INFO] GET /js/reportViewer.js
+2026-03-04 19:28:21 [INFO] GET /assets/logo.svg
+2026-03-04 19:28:21 [INFO] GET /js/main.js
+2026-03-04 19:28:21 [INFO] GET /api/report/be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:28:32 [INFO] GET /api/report/be683319-58af-47a7-8944-4fd4cd74cde3/download?format=docx
+2026-03-04 19:28:39 [INFO] GET /api/report/be683319-58af-47a7-8944-4fd4cd74cde3/download?format=json
+2026-03-04 19:28:45 [INFO] GET /api/report/6556f6a2-78dc-48a2-902d-d0fcd08e4baf/download?format=docx
+2026-03-04 19:28:49 [INFO] GET /api/report/6556f6a2-78dc-48a2-902d-d0fcd08e4baf/download?format=json
+2026-03-04 19:28:52 [INFO] GET /api/report/6556f6a2-78dc-48a2-902d-d0fcd08e4baf/download?format=docx
+2026-03-04 19:29:21 [INFO] GET /report.html?jobId=be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:29:21 [INFO] GET /css/style.css
+2026-03-04 19:29:21 [INFO] GET /assets/logo.svg
+2026-03-04 19:29:21 [INFO] GET /js/main.js
+2026-03-04 19:29:21 [INFO] GET /js/reportViewer.js
+2026-03-04 19:29:21 [INFO] GET /api/report/be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:29:21 [INFO] GET /report.html?jobId=be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:29:21 [INFO] GET /css/style.css
+2026-03-04 19:29:21 [INFO] GET /assets/logo.svg
+2026-03-04 19:29:21 [INFO] GET /js/main.js
+2026-03-04 19:29:21 [INFO] GET /js/reportViewer.js
+2026-03-04 19:29:21 [INFO] GET /api/report/be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:29:38 [INFO] GET /report.html?jobId=be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:29:38 [INFO] GET /css/style.css
+2026-03-04 19:29:38 [INFO] GET /assets/logo.svg
+2026-03-04 19:29:38 [INFO] GET /js/main.js
+2026-03-04 19:29:38 [INFO] GET /js/reportViewer.js
+2026-03-04 19:29:38 [INFO] GET /api/report/be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:29:38 [INFO] GET /assets/logo.svg
+2026-03-04 19:29:40 [INFO] GET /api/report/be683319-58af-47a7-8944-4fd4cd74cde3/download?format=docx
+2026-03-04 19:30:01 [INFO] GET /upload.html
+2026-03-04 19:30:01 [INFO] GET /js/upload.js
+2026-03-04 19:30:01 [INFO] GET /css/style.css
+2026-03-04 19:30:01 [INFO] GET /assets/logo.svg
+2026-03-04 19:30:01 [INFO] GET /js/main.js
+2026-03-04 19:30:02 [INFO] GET /report.html
+2026-03-04 19:30:02 [INFO] GET /css/style.css
+2026-03-04 19:30:02 [INFO] GET /assets/logo.svg
+2026-03-04 19:30:02 [INFO] GET /js/main.js
+2026-03-04 19:30:02 [INFO] GET /js/reportViewer.js
+2026-03-04 19:30:06 [INFO] GET /api/report/be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:31:05 [INFO] GET /index.html
+2026-03-04 19:31:05 [INFO] GET /css/style.css
+2026-03-04 19:31:05 [INFO] GET /assets/logo.svg
+2026-03-04 19:31:05 [INFO] GET /js/main.js
+2026-03-04 19:32:10 [INFO] GET /report.html?jobId=be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:32:10 [INFO] GET /css/style.css
+2026-03-04 19:32:10 [INFO] GET /assets/logo.svg
+2026-03-04 19:32:10 [INFO] GET /js/main.js
+2026-03-04 19:32:10 [INFO] GET /js/reportViewer.js
+2026-03-04 19:32:10 [INFO] GET /api/report/be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:35:11 [INFO] GET /api/report/%3Ch1%3Etest%3C/h1%3E
+2026-03-04 19:35:16 [INFO] GET /report.html?jobId=be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:35:16 [INFO] GET /css/style.css
+2026-03-04 19:35:16 [INFO] GET /assets/logo.svg
+2026-03-04 19:35:16 [INFO] GET /js/main.js
+2026-03-04 19:35:16 [INFO] GET /js/reportViewer.js
+2026-03-04 19:35:16 [INFO] GET /api/report/be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:35:16 [INFO] GET /assets/logo.svg
+2026-03-04 19:35:17 [INFO] GET /report.html?jobId=be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:35:17 [INFO] GET /css/style.css
+2026-03-04 19:35:17 [INFO] GET /assets/logo.svg
+2026-03-04 19:35:17 [INFO] GET /js/main.js
+2026-03-04 19:35:17 [INFO] GET /js/reportViewer.js
+2026-03-04 19:35:17 [INFO] GET /api/report/be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:35:17 [INFO] GET /assets/logo.svg
+2026-03-04 19:35:17 [INFO] GET /report.html?jobId=be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:35:17 [INFO] GET /css/style.css
+2026-03-04 19:35:17 [INFO] GET /assets/logo.svg
+2026-03-04 19:35:17 [INFO] GET /js/main.js
+2026-03-04 19:35:17 [INFO] GET /js/reportViewer.js
+2026-03-04 19:35:17 [INFO] GET /api/report/be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:35:17 [INFO] GET /assets/logo.svg
+2026-03-04 19:35:18 [INFO] GET /report.html?jobId=be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:35:18 [INFO] GET /css/style.css
+2026-03-04 19:35:18 [INFO] GET /assets/logo.svg
+2026-03-04 19:35:18 [INFO] GET /js/main.js
+2026-03-04 19:35:18 [INFO] GET /js/reportViewer.js
+2026-03-04 19:35:18 [INFO] GET /api/report/be683319-58af-47a7-8944-4fd4cd74cde3
+2026-03-04 19:35:18 [INFO] GET /assets/logo.svg
+2026-03-04 19:35:19 [INFO] GET /index.html
+2026-03-04 19:35:19 [INFO] GET /css/style.css
+2026-03-04 19:35:19 [INFO] GET /assets/logo.svg
+2026-03-04 19:35:19 [INFO] GET /js/main.js
+2026-03-04 19:36:08 [INFO] Running with in-memory job queue (set USE_REDIS=true to enable Redis)
+2026-03-04 19:36:08 [INFO] AI Bug Detection server running on http://localhost:3000
+2026-03-04 19:42:34 [INFO] GET /favicon.ico
+2026-03-04 19:56:01 [INFO] Running with in-memory job queue (set USE_REDIS=true to enable Redis)
+2026-03-04 19:56:01 [INFO] AI Bug Detection server running on http://localhost:3000
+2026-03-04 19:56:05 [INFO] GET /report.html?jobId=55fc0675-2698-4925-873d-b3fa89f1d476
+2026-03-04 19:56:05 [INFO] GET /css/style.css
+2026-03-04 19:56:05 [INFO] GET /assets/logo.svg
+2026-03-04 19:56:05 [INFO] GET /js/main.js
+2026-03-04 19:56:05 [INFO] GET /js/reportViewer.js
+2026-03-04 19:56:05 [INFO] GET /api/report/55fc0675-2698-4925-873d-b3fa89f1d476
+2026-03-04 19:56:05 [INFO] GET /assets/logo.svg
+2026-03-04 19:56:10 [INFO] GET /index.html
+2026-03-04 19:56:10 [INFO] GET /css/style.css
+2026-03-04 19:56:10 [INFO] GET /assets/logo.svg
+2026-03-04 19:56:10 [INFO] GET /js/main.js
+2026-03-04 19:56:11 [INFO] GET /upload.html
+2026-03-04 19:56:11 [INFO] GET /css/style.css
+2026-03-04 19:56:11 [INFO] GET /assets/logo.svg
+2026-03-04 19:56:11 [INFO] GET /js/main.js
+2026-03-04 19:56:11 [INFO] GET /js/upload.js
+2026-03-04 19:56:17 [INFO] POST /api/upload
+2026-03-04 19:56:17 [INFO] Job enqueued: 1503e231-5d3f-4e1e-b453-b5dbba882835 (low_bugs.c, c)
+2026-03-04 19:56:17 [INFO] [1503e231-5d3f-4e1e-b453-b5dbba882835] Starting analysis (c)
+2026-03-04 19:56:17 [INFO] [Sandbox] Running: gcc -Wall -Wextra -Wpedantic -fsyntax-only -fanalyzer C:\Users\thaku\Downloads\Project\uploads\1503e231-5d3f-4e1e-b453-b5dbba882835.c
+2026-03-04 19:56:17 [INFO] [Sandbox] Running: cppcheck --enable=all --inconclusive --force --xml --xml-version=2 C:\Users\thaku\Downloads\Project\uploads\1503e231-5d3f-4e1e-b453-b5dbba882835.c
+2026-03-04 19:56:17 [INFO] [Sandbox] Command exited with code 1
+2026-03-04 19:56:17 [INFO] [Sandbox] Command exited with code 1
+2026-03-04 19:56:17 [INFO] [1503e231-5d3f-4e1e-b453-b5dbba882835] Analysis complete – Risk Score: 100
+2026-03-04 19:56:17 [INFO] Report JSON saved: C:\Users\thaku\Downloads\Project\reports\1503e231-5d3f-4e1e-b453-b5dbba882835.json
+2026-03-04 19:56:18 [INFO] Report DOCX saved: C:\Users\thaku\Downloads\Project\reports\1503e231-5d3f-4e1e-b453-b5dbba882835.docx
+2026-03-04 19:56:18 [INFO] [InMemory] Job 1503e231-5d3f-4e1e-b453-b5dbba882835 completed successfully
+2026-03-04 19:56:19 [INFO] GET /api/status/1503e231-5d3f-4e1e-b453-b5dbba882835
+2026-03-04 19:56:20 [INFO] GET /report.html?jobId=1503e231-5d3f-4e1e-b453-b5dbba882835
+2026-03-04 19:56:20 [INFO] GET /css/style.css
+2026-03-04 19:56:20 [INFO] GET /assets/logo.svg
+2026-03-04 19:56:20 [INFO] GET /js/main.js
+2026-03-04 19:56:20 [INFO] GET /js/reportViewer.js
+2026-03-04 19:56:20 [INFO] GET /api/report/1503e231-5d3f-4e1e-b453-b5dbba882835
+2026-03-04 19:56:30 [INFO] POST /api/upload
+2026-03-04 19:56:30 [INFO] Job enqueued: 4a8dd56e-9044-4940-8e4e-e6d9a71ac513 (high_bugs.py, python)
+2026-03-04 19:56:30 [INFO] [4a8dd56e-9044-4940-8e4e-e6d9a71ac513] Starting analysis (python)
+2026-03-04 19:56:30 [INFO] [Sandbox] Running: python -m pylint --output-format=json --disable=C0114,C0115,C0116 C:\Users\thaku\Downloads\Project\uploads\4a8dd56e-9044-4940-8e4e-e6d9a71ac513.py
+2026-03-04 19:56:30 [INFO] [Sandbox] Running: python -m bandit -f json -ll C:\Users\thaku\Downloads\Project\uploads\4a8dd56e-9044-4940-8e4e-e6d9a71ac513.py
+2026-03-04 19:56:31 [INFO] [Sandbox] Command exited with code 1
+2026-03-04 19:56:32 [INFO] [Sandbox] Command exited with code 20
+2026-03-04 19:56:32 [INFO] [4a8dd56e-9044-4940-8e4e-e6d9a71ac513] Analysis complete – Risk Score: 0
+2026-03-04 19:56:32 [INFO] Report JSON saved: C:\Users\thaku\Downloads\Project\reports\4a8dd56e-9044-4940-8e4e-e6d9a71ac513.json
+2026-03-04 19:56:32 [INFO] GET /api/status/4a8dd56e-9044-4940-8e4e-e6d9a71ac513
+2026-03-04 19:56:32 [INFO] Report DOCX saved: C:\Users\thaku\Downloads\Project\reports\4a8dd56e-9044-4940-8e4e-e6d9a71ac513.docx
+2026-03-04 19:56:32 [INFO] [InMemory] Job 4a8dd56e-9044-4940-8e4e-e6d9a71ac513 completed successfully
+2026-03-04 19:56:34 [INFO] GET /api/status/4a8dd56e-9044-4940-8e4e-e6d9a71ac513
+2026-03-04 19:56:35 [INFO] GET /report.html?jobId=4a8dd56e-9044-4940-8e4e-e6d9a71ac513
+2026-03-04 19:56:35 [INFO] GET /css/style.css
+2026-03-04 19:56:35 [INFO] GET /assets/logo.svg
+2026-03-04 19:56:35 [INFO] GET /js/main.js
+2026-03-04 19:56:35 [INFO] GET /js/reportViewer.js
+2026-03-04 19:56:35 [INFO] GET /api/report/4a8dd56e-9044-4940-8e4e-e6d9a71ac513
+2026-03-04 19:56:42 [INFO] POST /api/upload
+2026-03-04 19:56:42 [INFO] Job enqueued: adbd9d0c-bf39-407e-87ad-0ea8146fb5d4 (medium_bugs.cpp, cpp)
+2026-03-04 19:56:42 [INFO] [adbd9d0c-bf39-407e-87ad-0ea8146fb5d4] Starting analysis (cpp)
+2026-03-04 19:56:42 [INFO] [Sandbox] Running: gcc -Wall -Wextra -Wpedantic -fsyntax-only -fanalyzer C:\Users\thaku\Downloads\Project\uploads\adbd9d0c-bf39-407e-87ad-0ea8146fb5d4.cpp
+2026-03-04 19:56:42 [INFO] [Sandbox] Running: cppcheck --enable=all --inconclusive --force --xml --xml-version=2 C:\Users\thaku\Downloads\Project\uploads\adbd9d0c-bf39-407e-87ad-0ea8146fb5d4.cpp
+2026-03-04 19:56:42 [INFO] [Sandbox] Command exited with code 1
+2026-03-04 19:56:42 [INFO] [Sandbox] Command exited with code 1
+2026-03-04 19:56:43 [INFO] [adbd9d0c-bf39-407e-87ad-0ea8146fb5d4] Analysis complete – Risk Score: 100
+2026-03-04 19:56:43 [INFO] Report JSON saved: C:\Users\thaku\Downloads\Project\reports\adbd9d0c-bf39-407e-87ad-0ea8146fb5d4.json
+2026-03-04 19:56:43 [INFO] Report DOCX saved: C:\Users\thaku\Downloads\Project\reports\adbd9d0c-bf39-407e-87ad-0ea8146fb5d4.docx
+2026-03-04 19:56:43 [INFO] [InMemory] Job adbd9d0c-bf39-407e-87ad-0ea8146fb5d4 completed successfully
+2026-03-04 19:56:44 [INFO] GET /api/status/adbd9d0c-bf39-407e-87ad-0ea8146fb5d4
+2026-03-04 19:56:46 [INFO] GET /report.html?jobId=adbd9d0c-bf39-407e-87ad-0ea8146fb5d4
+2026-03-04 19:56:46 [INFO] GET /css/style.css
+2026-03-04 19:56:46 [INFO] GET /assets/logo.svg
+2026-03-04 19:56:46 [INFO] GET /js/main.js
+2026-03-04 19:56:46 [INFO] GET /js/reportViewer.js
+2026-03-04 19:56:46 [INFO] GET /api/report/adbd9d0c-bf39-407e-87ad-0ea8146fb5d4
+2026-03-04 19:57:03 [INFO] POST /api/upload
+2026-03-04 19:57:03 [INFO] Job enqueued: 8c293f45-e38a-491f-8f58-0c2be53d45fe (low_bugs.c, c)
+2026-03-04 19:57:03 [INFO] [8c293f45-e38a-491f-8f58-0c2be53d45fe] Starting analysis (c)
+2026-03-04 19:57:03 [INFO] [Sandbox] Running: gcc -Wall -Wextra -Wpedantic -fsyntax-only -fanalyzer C:\Users\thaku\Downloads\Project\uploads\8c293f45-e38a-491f-8f58-0c2be53d45fe.c
+2026-03-04 19:57:03 [INFO] [Sandbox] Running: cppcheck --enable=all --inconclusive --force --xml --xml-version=2 C:\Users\thaku\Downloads\Project\uploads\8c293f45-e38a-491f-8f58-0c2be53d45fe.c
+2026-03-04 19:57:03 [INFO] [Sandbox] Command exited with code 1
+2026-03-04 19:57:03 [INFO] [Sandbox] Command exited with code 1
+2026-03-04 19:57:03 [INFO] [8c293f45-e38a-491f-8f58-0c2be53d45fe] Analysis complete – Risk Score: 100
+2026-03-04 19:57:03 [INFO] Report JSON saved: C:\Users\thaku\Downloads\Project\reports\8c293f45-e38a-491f-8f58-0c2be53d45fe.json
+2026-03-04 19:57:03 [INFO] Report DOCX saved: C:\Users\thaku\Downloads\Project\reports\8c293f45-e38a-491f-8f58-0c2be53d45fe.docx
+2026-03-04 19:57:03 [INFO] [InMemory] Job 8c293f45-e38a-491f-8f58-0c2be53d45fe completed successfully
+2026-03-04 19:57:05 [INFO] GET /api/status/8c293f45-e38a-491f-8f58-0c2be53d45fe
+2026-03-04 19:57:06 [INFO] GET /report.html?jobId=8c293f45-e38a-491f-8f58-0c2be53d45fe
+2026-03-04 19:57:06 [INFO] GET /css/style.css
+2026-03-04 19:57:06 [INFO] GET /assets/logo.svg
+2026-03-04 19:57:06 [INFO] GET /js/main.js
+2026-03-04 19:57:06 [INFO] GET /js/reportViewer.js
+2026-03-04 19:57:06 [INFO] GET /api/report/8c293f45-e38a-491f-8f58-0c2be53d45fe
+2026-03-04 19:57:35 [INFO] GET /upload.html
+2026-03-04 19:57:35 [INFO] GET /css/style.css
+2026-03-04 19:57:35 [INFO] GET /assets/logo.svg
+2026-03-04 19:57:35 [INFO] GET /js/main.js
+2026-03-04 19:57:35 [INFO] GET /js/upload.js
+2026-03-04 19:59:50 [INFO] GET /upload.html
+2026-03-04 19:59:50 [INFO] GET /css/style.css
+2026-03-04 19:59:50 [INFO] GET /assets/logo.svg
+2026-03-04 19:59:50 [INFO] GET /js/main.js
+2026-03-04 19:59:50 [INFO] GET /js/upload.js
+2026-03-04 20:01:07 [INFO] GET /upload.html
+2026-03-04 20:01:07 [INFO] GET /css/style.css
+2026-03-04 20:01:07 [INFO] GET /assets/logo.svg
+2026-03-04 20:01:07 [INFO] GET /js/main.js
+2026-03-04 20:01:07 [INFO] GET /js/upload.js
+2026-03-04 20:01:47 [INFO] GET /report.html
+2026-03-04 20:01:47 [INFO] GET /css/style.css
+2026-03-04 20:01:47 [INFO] GET /assets/logo.svg
+2026-03-04 20:01:47 [INFO] GET /js/main.js
+2026-03-04 20:01:47 [INFO] GET /js/reportViewer.js
+2026-03-04 20:01:55 [INFO] GET /upload.html
+2026-03-04 20:01:55 [INFO] GET /css/style.css
+2026-03-04 20:01:55 [INFO] GET /assets/logo.svg
+2026-03-04 20:01:55 [INFO] GET /js/main.js
+2026-03-04 20:01:55 [INFO] GET /js/upload.js
+2026-03-04 20:02:14 [INFO] GET /report.html
+2026-03-04 20:02:14 [INFO] GET /css/style.css
+2026-03-04 20:02:14 [INFO] GET /assets/logo.svg
+2026-03-04 20:02:14 [INFO] GET /js/main.js
+2026-03-04 20:02:14 [INFO] GET /js/reportViewer.js
+2026-03-04 20:05:14 [INFO] Running with in-memory job queue (set USE_REDIS=true to enable Redis)
+2026-03-04 20:05:14 [INFO] AI Bug Detection server running on http://localhost:3000
+2026-03-04 20:06:42 [INFO] POST /api/upload
+2026-03-04 20:06:42 [INFO] Job enqueued: e52c4d7d-0515-4a50-9b0d-a35c8d16d08e (low_bugs.c, c)
+2026-03-04 20:06:42 [INFO] [ToolDiscovery] Found gcc at: C:\MinGW\bin\gcc.exe
+2026-03-04 20:06:42 [INFO] [ToolDiscovery] Found g++ at: C:\MinGW\bin\g++.exe
+2026-03-04 20:06:42 [INFO] [e52c4d7d-0515-4a50-9b0d-a35c8d16d08e] Starting analysis (c)
+2026-03-04 20:06:42 [INFO] [Sandbox] Running: C:\MinGW\bin\gcc.exe -Wall -Wextra -Wpedantic -fsyntax-only C:\Users\thaku\Downloads\Project\uploads\e52c4d7d-0515-4a50-9b0d-a35c8d16d08e.c
+2026-03-04 20:06:42 [INFO] [Sandbox] Running: cppcheck --enable=all --inconclusive --force --xml --xml-version=2 C:\Users\thaku\Downloads\Project\uploads\e52c4d7d-0515-4a50-9b0d-a35c8d16d08e.c
+2026-03-04 20:06:42 [INFO] [Sandbox] Command exited with code 1
+2026-03-04 20:06:43 [INFO] [Sandbox] Command exited with code 1
+2026-03-04 20:06:43 [INFO] [e52c4d7d-0515-4a50-9b0d-a35c8d16d08e] Analysis complete – Risk Score: 100
+2026-03-04 20:06:43 [INFO] Report JSON saved: C:\Users\thaku\Downloads\Project\reports\e52c4d7d-0515-4a50-9b0d-a35c8d16d08e.json
+2026-03-04 20:06:43 [INFO] Report DOCX saved: C:\Users\thaku\Downloads\Project\reports\e52c4d7d-0515-4a50-9b0d-a35c8d16d08e.docx
+2026-03-04 20:06:43 [INFO] [InMemory] Job e52c4d7d-0515-4a50-9b0d-a35c8d16d08e completed successfully
+2026-03-04 20:07:21 [INFO] GET /upload.html
+2026-03-04 20:07:21 [INFO] GET /css/style.css
+2026-03-04 20:07:21 [INFO] GET /assets/logo.svg
+2026-03-04 20:07:21 [INFO] GET /js/main.js
+2026-03-04 20:07:21 [INFO] GET /js/upload.js
+2026-03-04 20:07:27 [INFO] POST /api/upload
+2026-03-04 20:07:27 [INFO] Job enqueued: 61abaa31-294b-4e20-a6dd-dccf086ca3a6 (high_bugs.py, python)
+2026-03-04 20:07:27 [INFO] [61abaa31-294b-4e20-a6dd-dccf086ca3a6] Starting analysis (python)
+2026-03-04 20:07:27 [INFO] [Sandbox] Running: python -m pylint --output-format=json --disable=C0114,C0115,C0116 C:\Users\thaku\Downloads\Project\uploads\61abaa31-294b-4e20-a6dd-dccf086ca3a6.py
+2026-03-04 20:07:27 [INFO] [Sandbox] Running: python -m bandit -f json -ll C:\Users\thaku\Downloads\Project\uploads\61abaa31-294b-4e20-a6dd-dccf086ca3a6.py
+2026-03-04 20:07:27 [INFO] [Sandbox] Command exited with code 1
+2026-03-04 20:07:28 [INFO] [Sandbox] Command exited with code 20
+2026-03-04 20:07:29 [INFO] [61abaa31-294b-4e20-a6dd-dccf086ca3a6] Analysis complete – Risk Score: 0
+2026-03-04 20:07:29 [INFO] Report JSON saved: C:\Users\thaku\Downloads\Project\reports\61abaa31-294b-4e20-a6dd-dccf086ca3a6.json
+2026-03-04 20:07:29 [INFO] GET /api/status/61abaa31-294b-4e20-a6dd-dccf086ca3a6
+2026-03-04 20:07:29 [INFO] Report DOCX saved: C:\Users\thaku\Downloads\Project\reports\61abaa31-294b-4e20-a6dd-dccf086ca3a6.docx
+2026-03-04 20:07:29 [INFO] [InMemory] Job 61abaa31-294b-4e20-a6dd-dccf086ca3a6 completed successfully
+2026-03-04 20:07:31 [INFO] GET /api/status/61abaa31-294b-4e20-a6dd-dccf086ca3a6
+2026-03-04 20:07:32 [INFO] GET /report.html?jobId=61abaa31-294b-4e20-a6dd-dccf086ca3a6
+2026-03-04 20:07:32 [INFO] GET /css/style.css
+2026-03-04 20:07:32 [INFO] GET /assets/logo.svg
+2026-03-04 20:07:32 [INFO] GET /js/main.js
+2026-03-04 20:07:32 [INFO] GET /js/reportViewer.js
+2026-03-04 20:07:32 [INFO] GET /api/report/61abaa31-294b-4e20-a6dd-dccf086ca3a6
+2026-03-04 20:08:31 [INFO] GET /api/report/61abaa31-294b-4e20-a6dd-dccf086ca3a6/download?format=docx
+2026-03-04 20:08:41 [INFO] GET /index.html
+2026-03-04 20:08:41 [INFO] GET /css/style.css
+2026-03-04 20:08:41 [INFO] GET /assets/logo.svg
+2026-03-04 20:08:41 [INFO] GET /js/main.js
+2026-03-04 20:08:43 [INFO] GET /upload.html
+2026-03-04 20:08:43 [INFO] GET /css/style.css
+2026-03-04 20:08:43 [INFO] GET /assets/logo.svg
+2026-03-04 20:08:43 [INFO] GET /js/main.js
+2026-03-04 20:08:43 [INFO] GET /js/upload.js
+2026-03-04 20:08:48 [INFO] POST /api/upload
+2026-03-04 20:08:48 [INFO] Job enqueued: 73f6af42-4800-4c8e-992e-360a00738dce (medium_bugs.cpp, cpp)
+2026-03-04 20:08:48 [INFO] [73f6af42-4800-4c8e-992e-360a00738dce] Starting analysis (cpp)
+2026-03-04 20:08:48 [INFO] [Sandbox] Running: C:\MinGW\bin\g++.exe -Wall -Wextra -Wpedantic -fsyntax-only C:\Users\thaku\Downloads\Project\uploads\73f6af42-4800-4c8e-992e-360a00738dce.cpp
+2026-03-04 20:08:48 [INFO] [Sandbox] Running: cppcheck --enable=all --inconclusive --force --xml --xml-version=2 C:\Users\thaku\Downloads\Project\uploads\73f6af42-4800-4c8e-992e-360a00738dce.cpp
+2026-03-04 20:08:48 [INFO] [Sandbox] Command exited with code 1
+2026-03-04 20:08:48 [INFO] [Sandbox] Command exited with code 1
+2026-03-04 20:08:48 [INFO] [73f6af42-4800-4c8e-992e-360a00738dce] Analysis complete – Risk Score: 100
+2026-03-04 20:08:48 [INFO] Report JSON saved: C:\Users\thaku\Downloads\Project\reports\73f6af42-4800-4c8e-992e-360a00738dce.json
+2026-03-04 20:08:48 [INFO] Report DOCX saved: C:\Users\thaku\Downloads\Project\reports\73f6af42-4800-4c8e-992e-360a00738dce.docx
+2026-03-04 20:08:48 [INFO] [InMemory] Job 73f6af42-4800-4c8e-992e-360a00738dce completed successfully
+2026-03-04 20:08:50 [INFO] GET /api/status/73f6af42-4800-4c8e-992e-360a00738dce
+2026-03-04 20:08:51 [INFO] GET /report.html?jobId=73f6af42-4800-4c8e-992e-360a00738dce
+2026-03-04 20:08:51 [INFO] GET /css/style.css
+2026-03-04 20:08:51 [INFO] GET /assets/logo.svg
+2026-03-04 20:08:51 [INFO] GET /js/main.js
+2026-03-04 20:08:51 [INFO] GET /js/reportViewer.js
+2026-03-04 20:08:51 [INFO] GET /api/report/73f6af42-4800-4c8e-992e-360a00738dce
+2026-03-04 20:09:01 [INFO] GET /report.html?jobId=73f6af42-4800-4c8e-992e-360a00738dce
+2026-03-04 20:09:01 [INFO] GET /css/style.css
+2026-03-04 20:09:01 [INFO] GET /assets/logo.svg
+2026-03-04 20:09:01 [INFO] GET /js/main.js
+2026-03-04 20:09:01 [INFO] GET /js/reportViewer.js
+2026-03-04 20:09:01 [INFO] GET /api/report/73f6af42-4800-4c8e-992e-360a00738dce
+2026-03-04 20:09:01 [INFO] GET /assets/logo.svg
+2026-03-04 20:09:02 [INFO] GET /report.html?jobId=73f6af42-4800-4c8e-992e-360a00738dce
+2026-03-04 20:09:02 [INFO] GET /css/style.css
+2026-03-04 20:09:02 [INFO] GET /assets/logo.svg
+2026-03-04 20:09:02 [INFO] GET /js/main.js
+2026-03-04 20:09:02 [INFO] GET /js/reportViewer.js
+2026-03-04 20:09:02 [INFO] GET /api/report/73f6af42-4800-4c8e-992e-360a00738dce
+2026-03-04 20:09:02 [INFO] GET /assets/logo.svg
+2026-03-04 20:09:02 [INFO] GET /report.html?jobId=73f6af42-4800-4c8e-992e-360a00738dce
+2026-03-04 20:09:02 [INFO] GET /css/style.css
+2026-03-04 20:09:02 [INFO] GET /assets/logo.svg
+2026-03-04 20:09:02 [INFO] GET /js/main.js
+2026-03-04 20:09:02 [INFO] GET /js/reportViewer.js
+2026-03-04 20:09:02 [INFO] GET /api/report/73f6af42-4800-4c8e-992e-360a00738dce
+2026-03-04 20:09:02 [INFO] GET /assets/logo.svg
+2026-03-04 20:09:02 [INFO] GET /report.html?jobId=73f6af42-4800-4c8e-992e-360a00738dce
+2026-03-04 20:09:02 [INFO] GET /css/style.css
+2026-03-04 20:09:02 [INFO] GET /assets/logo.svg
+2026-03-04 20:09:02 [INFO] GET /js/main.js
+2026-03-04 20:09:02 [INFO] GET /js/reportViewer.js
+2026-03-04 20:09:02 [INFO] GET /api/report/73f6af42-4800-4c8e-992e-360a00738dce
+2026-03-04 20:09:02 [INFO] GET /assets/logo.svg
+2026-03-04 20:09:03 [INFO] GET /report.html?jobId=73f6af42-4800-4c8e-992e-360a00738dce
+2026-03-04 20:09:03 [INFO] GET /css/style.css
+2026-03-04 20:09:03 [INFO] GET /assets/logo.svg
+2026-03-04 20:09:03 [INFO] GET /js/main.js
+2026-03-04 20:09:03 [INFO] GET /js/reportViewer.js
+2026-03-04 20:09:03 [INFO] GET /api/report/73f6af42-4800-4c8e-992e-360a00738dce
+2026-03-04 20:09:03 [INFO] GET /assets/logo.svg
+2026-03-04 20:09:07 [INFO] GET /upload.html
+2026-03-04 20:09:07 [INFO] GET /css/style.css
+2026-03-04 20:09:07 [INFO] GET /assets/logo.svg
+2026-03-04 20:09:07 [INFO] GET /js/main.js
+2026-03-04 20:09:07 [INFO] GET /js/upload.js
+2026-03-04 20:09:12 [INFO] POST /api/upload
+2026-03-04 20:09:12 [INFO] Job enqueued: 474b68ac-d884-4a0b-8f41-3f3b2f390fbd (low_bugs.c, c)
+2026-03-04 20:09:12 [INFO] [474b68ac-d884-4a0b-8f41-3f3b2f390fbd] Starting analysis (c)
+2026-03-04 20:09:12 [INFO] [Sandbox] Running: C:\MinGW\bin\gcc.exe -Wall -Wextra -Wpedantic -fsyntax-only C:\Users\thaku\Downloads\Project\uploads\474b68ac-d884-4a0b-8f41-3f3b2f390fbd.c
+2026-03-04 20:09:12 [INFO] [Sandbox] Running: cppcheck --enable=all --inconclusive --force --xml --xml-version=2 C:\Users\thaku\Downloads\Project\uploads\474b68ac-d884-4a0b-8f41-3f3b2f390fbd.c
+2026-03-04 20:09:12 [INFO] [Sandbox] Command exited with code 1
+2026-03-04 20:09:12 [INFO] [Sandbox] Command exited with code 1
+2026-03-04 20:09:12 [INFO] [474b68ac-d884-4a0b-8f41-3f3b2f390fbd] Analysis complete – Risk Score: 100
+2026-03-04 20:09:12 [INFO] Report JSON saved: C:\Users\thaku\Downloads\Project\reports\474b68ac-d884-4a0b-8f41-3f3b2f390fbd.json
+2026-03-04 20:09:12 [INFO] Report DOCX saved: C:\Users\thaku\Downloads\Project\reports\474b68ac-d884-4a0b-8f41-3f3b2f390fbd.docx
+2026-03-04 20:09:12 [INFO] [InMemory] Job 474b68ac-d884-4a0b-8f41-3f3b2f390fbd completed successfully
+2026-03-04 20:09:14 [INFO] GET /api/status/474b68ac-d884-4a0b-8f41-3f3b2f390fbd
+2026-03-04 20:09:15 [INFO] GET /report.html?jobId=474b68ac-d884-4a0b-8f41-3f3b2f390fbd
+2026-03-04 20:09:15 [INFO] GET /css/style.css
+2026-03-04 20:09:15 [INFO] GET /assets/logo.svg
+2026-03-04 20:09:15 [INFO] GET /js/main.js
+2026-03-04 20:09:15 [INFO] GET /js/reportViewer.js
+2026-03-04 20:09:15 [INFO] GET /api/report/474b68ac-d884-4a0b-8f41-3f3b2f390fbd

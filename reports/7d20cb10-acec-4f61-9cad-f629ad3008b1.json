@@ -1,0 +1,8 @@
+{
+  "job_id": "7d20cb10-acec-4f61-9cad-f629ad3008b1",
+  "file": "7d20cb10-acec-4f61-9cad-f629ad3008b1.cpp",
+  "language": "cpp",
+  "findings": [],
+  "risk_score": 100,
+  "risk_grade": "Secure"
+}

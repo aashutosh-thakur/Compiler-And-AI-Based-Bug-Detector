@@ -1,0 +1,16 @@
+{
+  "job_id": "474b68ac-d884-4a0b-8f41-3f3b2f390fbd",
+  "file": "474b68ac-d884-4a0b-8f41-3f3b2f390fbd.c",
+  "language": "c",
+  "findings": [],
+  "risk_score": 100,
+  "risk_grade": "Secure",
+  "severity_counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "info": 0
+  },
+  "deduction_formula": "100 - [(0 × 15) + (0 × 10) + (0 × 5) + (0 × 2)] = 100"
+}

@@ -1,0 +1,8 @@
+{
+  "job_id": "be683319-58af-47a7-8944-4fd4cd74cde3",
+  "file": "be683319-58af-47a7-8944-4fd4cd74cde3.c",
+  "language": "c",
+  "findings": [],
+  "risk_score": 100,
+  "risk_grade": "Secure"
+}
