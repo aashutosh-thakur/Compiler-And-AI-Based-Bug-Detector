@@ -34,15 +34,28 @@
 
 The modern software development lifecycle demands rapid iteration, yet this velocity frequently introduces severe architectural flaws, logic errors, and security vulnerabilities. Traditional heuristic-based **Static Application Security Testing (SAST)** tools generate an overwhelming volume of false positives, leading to alert fatigue and the eventual abandonment of security warnings by development teams.
 
-This project addresses that gap by integrating **Artificial Intelligence (AI)**—specifically Large Language Models (LLMs)—into the static analysis ecosystem. By orchestrating a multi-tiered pipeline that ingests source code, normalizes disparate tool outputs, and applies AI-driven contextual reasoning, the system:
+This project addresses that gap by integrating **Artificial Intelligence (AI)**—specifically Google's **Gemini LLM**—into the static analysis ecosystem. By orchestrating a multi-tiered pipeline that ingests source code, normalizes disparate tool outputs, and applies AI-driven contextual reasoning, the system:
 
-- **Drastically reduces false positives**
-- **Accurately predicts vulnerability severity**
-- **Generates structured, actionable security reports** (.docx format)
-- **Maps findings to OWASP Top 10 categories**
-- **Calculates a quantitative Risk Score**
+- **Reduces false positives** via LLM-based triage (with heuristic fallback when AI is unavailable)
+- **Predicts vulnerability severity** based on CWE classification and code context
+- **Generates structured, actionable security reports** (.docx and JSON formats)
+- **Maps findings to OWASP Top 10 categories** via CWE cross-references
+- **Calculates a quantitative Risk Score** using a weighted deduction formula
 
-The system supports **C/C++** (via GCC + Cppcheck) and **Python** (via Pylint + Bandit) and is designed as a fully web-based, async upload platform.
+The system supports **C/C++** (via GCC + Cppcheck) and **Python** (via Pylint + Bandit) and runs as a fully web-based, async upload platform with an in-memory job queue (Redis/Bull optional for production).
+
+### Current Implementation Status
+
+| Feature | Status | Details |
+|---|---|---|
+| 📤 **File Upload** | ✅ Working | Drag & drop upload for `.c`, `.cpp`, `.py` with auto language detection |
+| ⚙️ **Compiler + SAST Scan** | ✅ Working | GCC/G++ + Cppcheck (C/C++), Pylint + Bandit (Python) run in parallel. Includes Windows tool discovery for MinGW/MSYS2 |
+| 🤖 **AI Classification** | ✅ Working | Google Gemini API (`gemini-2.0-flash`) with automatic heuristic fallback when API is unavailable or rate-limited |
+| 📊 **Risk Score & OWASP Map** | ✅ Working | Weighted deduction formula (0–100), CWE→OWASP Top 10 cross-reference mapping |
+| 📝 **Report Generation** | ✅ Working | Download `.docx` and JSON reports with findings, severity, AI explanations, and risk analysis |
+| 🔒 **Sandbox Isolation** | ⚠️ Basic | Process-level isolation with timeouts and file validation. MicroVM/gVisor sandboxing is architecturally planned for production |
+| 📡 **Job Queue** | ✅ Working | In-memory queue (default). Redis/Bull can be enabled via `.env` for production |
+| 🔐 **Path Traversal Protection** | ✅ Working | All job IDs sanitized via `validator.sanitizeJobId()` |
 
 ---
 
@@ -136,13 +149,13 @@ User Upload → Language Detection → Scatter-Gather Compiler/SAST Execution
 
 The platform implements the **Web-Queue-Worker** architectural pattern to decouple the frontend API from heavy backend processing:
 
-| Component | Technology | Role |
-|---|---|---|
-| **Frontend API** | Node.js + Express | Receives uploads, assigns Job IDs, enqueues jobs |
-| **Message Queue** | Redis / Bull / RabbitMQ | Load-leveling buffer for analysis tasks |
-| **Worker Nodes** | Dockerized analysis engines | Execute compilers, SAST tools, AI classification |
-| **AI Layer** | Python (LLM API / local model) | Contextual severity classification & false positive filtering |
-| **Report Generator** | python-docx | Produces structured `.docx` security reports |
+| Component | Technology | Role | Status |
+|---|---|---|---|
+| **Frontend API** | Node.js + Express | Receives uploads, assigns Job IDs, enqueues jobs | ✅ Implemented |
+| **Message Queue** | In-memory (default) / Redis+Bull (optional) | Load-leveling buffer for analysis tasks | ✅ Implemented |
+| **Analysis Engine** | `child_process.spawn` with timeouts | Executes compilers and SAST tools in parallel | ✅ Implemented |
+| **AI Layer** | Python + Google Gemini API | Contextual severity classification & false positive filtering | ✅ Implemented (heuristic fallback when API unavailable) |
+| **Report Generator** | python-docx | Produces structured `.docx` and JSON security reports | ✅ Implemented |
 
 ---
 
@@ -282,24 +295,35 @@ $$FinalScore = \max(0, R_{final})$$
 
 The platform applies proven cloud architecture patterns:
 
-| Pattern | Application |
-|---|---|
-| **Web-Queue-Worker** | Decouples upload API from async analysis workers |
-| **Scatter-Gather** | Spawns concurrent compiler and SAST tool subprocesses per job |
-| **Bulkhead** | Isolates each analysis component (compile, lint, AI, report) in its own container |
-| **Quarantine** | Uploaded code passes through pre-checks in a sandboxed environment before full processing |
-| **Strangler Fig** | Incrementally migrates legacy analysis scripts into containerized microservices |
-| **API Gateway** | Enforces authentication/authorization on report downloads |
+| Pattern | Application | Status |
+|---|---|---|
+| **Web-Queue-Worker** | Decouples upload API from async analysis workers | ✅ Implemented (in-memory queue; Redis optional) |
+| **Scatter-Gather** | Spawns concurrent compiler and SAST tool subprocesses per job | ✅ Implemented |
+| **Bulkhead** | Isolates each analysis component (compile, lint, AI, report) | ⬜ Planned (currently runs in same process) |
+| **Quarantine** | Uploaded code passes through file-type and extension validation | ✅ Basic validation implemented |
+| **Strangler Fig** | Incrementally migrates legacy analysis scripts into containerized microservices | ⬜ Planned |
+| **API Gateway** | Enforces authentication/authorization on report downloads | ⬜ Planned |
 
 ### 10. Security of Executing Uploaded Code
 
-Running untrusted source code (even just compiling it) introduces critical **Remote Code Execution (RCE)** risks. The platform employs **defense-in-depth sandboxing**:
+Running untrusted source code (even just compiling it) introduces critical **Remote Code Execution (RCE)** risks.
 
-#### The Fallacy of Standard Containerization
+#### Current Implementation
 
-Standard Docker containers share the underlying Linux kernel. A kernel zero-day can lead to **container escape**, compromising the host infrastructure. For a production-grade code execution platform, shared-kernel containerization is **fundamentally inadequate**.
+The system currently uses **process-level sandboxing** via `child_process.spawn`:
 
-#### Advanced Sandboxing Solutions
+| Constraint | Current Implementation |
+|---|---|
+| **Execution Timeout** | Configurable timeout per process (default: 60 seconds) |
+| **Process Isolation** | Each tool runs in a separate subprocess |
+| **File Validation** | Extension whitelist + file size limits (2 MB max) |
+| **Path Sanitization** | Job IDs are sanitized to prevent path traversal attacks |
+
+> **Note:** This is suitable for development and academic use. For production deployment, the architecture is designed to support advanced sandboxing as described below.
+
+#### Production-Target Sandboxing (Future)
+
+The following advanced sandboxing solutions are researched and architecturally planned for production deployment:
 
 **1. User-Space Kernels (gVisor)**
 Developed by Google, gVisor provides an application kernel written in memory-safe Go. System calls from untrusted tools are intercepted and reinterpreted in user space, preventing direct interaction with the host OS kernel.
@@ -307,14 +331,8 @@ Developed by Google, gVisor provides an application kernel written in memory-saf
 **2. Hardware Virtualization (Firecracker / Kata Containers)**
 AWS Firecracker and Kata Containers use KVM to wrap each analysis job in a lightweight MicroVM that instantiates in milliseconds. Each MicroVM possesses a dedicated, isolated kernel — a kernel exploit affects only that ephemeral sandbox.
 
-#### Mandatory Runtime Constraints
-
-| Constraint | Implementation |
-|---|---|
-| **Network Isolation** | Default-deny network policy; no outbound internet access |
-| **CPU/Memory Quotas** | Hard cgroup limits eliminate fork bombs and resource exhaustion DoS |
-| **Execution Timeout** | 60-second hard timeout neutralizes infinite loops |
-| **Ephemeral Filesystems** | Temporary workspaces purged and destroyed immediately after job completion |
+**3. Docker Containerization**
+A `Dockerfile` and `sandbox.Dockerfile` are included in the repository for containerized deployment with resource limits and network isolation.
 
 ---
 
