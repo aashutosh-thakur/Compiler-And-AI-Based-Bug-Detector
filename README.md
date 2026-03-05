@@ -1,8 +1,8 @@
-# Compiler-Based AI Bug Detector
+# Compiler & AI Based Bug-Detector
 
-> **Advancing Automated Vulnerability Detection: Enhancing Traditional Compiler-Based Static Analysis Using AI-Driven Contextual Severity Classification**
+> **Advancing Automated Vulnerability Detection: Enhancing Traditional Compiler & AI Based Static Analysis Using AI-Driven Contextual Severity Classification**
 
-[![GitHub Repository](https://img.shields.io/badge/GitHub-Compiler--Based--AI--Bug--Detector-blue?logo=github)](https://github.com/aashutosh-thakur/Compiler-Based-AI-Bug-Detector)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Compiler--AI--Based--Bug--Detector-blue?logo=github)](https://github.com/aashutosh-thakur/Compiler-Based-AI-Bug-Detector)
 
 ---
 
