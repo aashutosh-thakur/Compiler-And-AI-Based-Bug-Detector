@@ -32,6 +32,8 @@
 
 ## Project Overview
 
+> **📌 This is Phase 1 of the project** — covering single-file static analysis with AI-enhanced severity classification, risk scoring, and report generation.
+
 The modern software development lifecycle demands rapid iteration, yet this velocity frequently introduces severe architectural flaws, logic errors, and security vulnerabilities. Traditional heuristic-based **Static Application Security Testing (SAST)** tools generate an overwhelming volume of false positives, leading to alert fatigue and the eventual abandonment of security warnings by development teams.
 
 This project addresses that gap by integrating **Artificial Intelligence (AI)**—specifically Google's **Gemini LLM**—into the static analysis ecosystem. By orchestrating a multi-tiered pipeline that ingests source code, normalizes disparate tool outputs, and applies AI-driven contextual reasoning, the system:
@@ -459,15 +461,43 @@ This project targets the methodological gap between **classic feature-based stat
 
 ---
 
-## Future Roadmap
+## Development Phases
 
-| Phase | Feature | Description |
-|---|---|---|
-| **Phase 3a** | Multi-File Interprocedural Support | Parse entire directory structures; track cross-file taint flows |
-| **Phase 3b** | Code Complexity Analysis | Integrate McCabe cyclomatic complexity into Risk Scoring Engine |
-| **Phase 3c** | OWASP Benchmark Scoring | Auto-generate scorecards measuring True Positive vs. False Positive ratio |
-| **Phase 3d** | CI/CD Integration | GitHub Actions / GitLab CI plugin for automatic PR analysis |
-| **Phase 3e** | Fine-tuned Local Model | Replace LLM API calls with a locally hosted, fine-tuned classification model |
+### Phase 1 — Single-File Analysis Platform ✅ (Current)
+
+| Feature | Status |
+|---|---|
+| Web-based file upload (C, C++, Python) | ✅ Complete |
+| GCC/G++ compiler warnings | ✅ Complete |
+| Cppcheck static analysis (C/C++) | ✅ Complete |
+| Pylint + Bandit analysis (Python) | ✅ Complete |
+| Output normalization to canonical JSON | ✅ Complete |
+| AI classification via Google Gemini API | ✅ Complete |
+| Heuristic fallback classifier | ✅ Complete |
+| CWE → OWASP Top 10 mapping | ✅ Complete |
+| Weighted risk scoring (0–100) | ✅ Complete |
+| .docx + JSON report generation | ✅ Complete |
+| Windows tool discovery (MinGW/MSYS2) | ✅ Complete |
+| Path traversal protection | ✅ Complete |
+
+### Phase 2 — Production Hardening (Planned)
+
+| Feature | Description |
+|---|---|
+| Docker/gVisor sandboxing | Isolate analysis in MicroVMs or user-space kernels |
+| Redis/Bull job queue | Production-grade async job processing |
+| Authentication & API Gateway | Secure report downloads and upload endpoints |
+| MongoDB persistence | Store analysis history and report metadata |
+
+### Phase 3 — Advanced Analysis (Planned)
+
+| Feature | Description |
+|---|---|
+| Multi-file interprocedural support | Track cross-file taint flows and data dependencies |
+| Code complexity analysis | McCabe cyclomatic complexity in risk scoring |
+| OWASP benchmark scoring | Auto-generate True Positive vs. False Positive scorecards |
+| CI/CD integration | GitHub Actions / GitLab CI plugin for automatic PR analysis |
+| Fine-tuned local model | Replace LLM API with locally hosted classification model |
 
 ---
 
