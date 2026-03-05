@@ -84,8 +84,8 @@ AI-Bug-Detection-System/
 │   │   ├── sandboxManager.js     # Launches containers
 │   │   └── storageManager.js     # Paths, retention
 │   ├── compiler/
-│   │   ├── cCompiler.js          # Wrappers for GCC / Cppcheck
-│   │   ├── pythonAnalyzer.js     # Wrappers for Pylint / Bandit
+│   │   ├── cCompiler.js          # GCC/Cppcheck wrappers + Windows tool discovery
+│   │   ├── pythonAnalyzer.js     # Pylint/Bandit wrappers (uses python -m)
 │   │   └── outputParser.js       # Parse raw tool output → canonical JSON
 │   ├── ai/
 │   │   ├── aiEngine.py           # LLM API wrapper or local model runner
@@ -112,6 +112,10 @@ AI-Bug-Detection-System/
 ├── scripts/
 │   ├── init-db.js
 │   └── cleanup-old-jobs.sh
+├── test_samples/                 # Sample test files with known bugs
+│   ├── low_bugs.c                # Low severity C test file
+│   ├── medium_bugs.cpp           # Medium severity C++ test file
+│   └── high_bugs.py              # Critical severity Python test file
 ├── requirements.txt              # Python deps for AI modules
 └── README.md
 ```
@@ -453,11 +457,28 @@ This project targets the methodological gap between **classic feature-based stat
 
 ### Prerequisites
 
-- Node.js (v18+)
-- Python (3.10+)
-- Docker
-- GCC / G++
-- Redis (for job queue)
+| Dependency | Version | Purpose | Required? |
+|---|---|---|---|
+| **Node.js** | v18+ | Backend server | ✅ Yes |
+| **Python** | 3.10+ | AI modules, report generation | ✅ Yes |
+| **GCC / G++** | Any (6.3+) | C/C++ compilation & warnings | ✅ For C/C++ |
+| **Cppcheck** | 2.x | C/C++ static analysis (memory, UB) | ✅ For C/C++ |
+| **Pylint** | 3.x | Python code quality analysis | ✅ For Python |
+| **Bandit** | 1.x | Python security analysis | ✅ For Python |
+| **Docker** | — | Production sandboxing | ⬜ Optional |
+| **Redis** | — | Production job queue | ⬜ Optional |
+
+> **Note:** The system works without Docker and Redis using an in-memory job queue. These are only needed for production deployments.
+
+#### Windows-Specific Setup
+
+On Windows, GCC is typically available via **MinGW** or **MSYS2**. The system includes **automatic tool discovery** that searches common installation paths:
+- `C:\MinGW\bin\` (MinGW)
+- `C:\msys64\mingw64\bin\` (MSYS2)
+- `C:\TDM-GCC-64\bin\` (TDM-GCC)
+- `C:\Program Files\Cppcheck\` (Cppcheck)
+
+Cppcheck can be installed from the [official releases](https://github.com/danmar/cppcheck/releases).
 
 ### Installation
 
@@ -470,15 +491,18 @@ cd Compiler-Based-AI-Bug-Detector
 cd backend
 npm install
 
-# Install Python dependencies
+# Install Python dependencies (from project root)
+cd ..
 pip install -r requirements.txt
 
-# Initialize the database
-node scripts/init-db.js
+# (Optional) Initialize the database (requires MongoDB)
+# node scripts/init-db.js
 
 # Start the server
 node backend/server.js
 ```
+
+The server runs at `http://localhost:3000` by default.
 
 ### Environment Variables
 
@@ -486,12 +510,29 @@ Create a `.env` file in the `backend/` directory:
 
 ```env
 PORT=3000
-REDIS_URL=redis://localhost:6379
 OPENAI_API_KEY=your_api_key_here
-UPLOAD_DIR=../uploads
-REPORTS_DIR=../reports
 SANDBOX_TIMEOUT=60
+
+# Optional overrides (paths are resolved relative to project root)
+# UPLOAD_DIR=uploads
+# REPORTS_DIR=reports
+# REDIS_URL=redis://localhost:6379
+# USE_REDIS=true
 ```
+
+> **Note:** `UPLOAD_DIR` and `REPORTS_DIR` are resolved as absolute paths relative to the project root. You can also specify absolute paths directly.
+
+### Testing with Sample Files
+
+The `test_samples/` directory contains files with known bugs at different severity levels:
+
+| File | Language | Bug Severity | Expected Score |
+|---|---|---|---|
+| `low_bugs.c` | C | Low (unused vars, unchecked returns) | ~80–100 🟢 |
+| `medium_bugs.cpp` | C++ | Medium (buffer overflow, use-after-free, memory leaks) | ~30–70 🟡 |
+| `high_bugs.py` | Python | Critical (SQL injection, command injection, eval, pickle) | 0–10 🔴 |
+
+Upload these through the web UI at `/upload.html` to verify the analysis pipeline.
 
 ---
 
@@ -508,6 +549,21 @@ SANDBOX_TIMEOUT=60
 ## License
 
 This project is developed for academic research purposes. See [LICENSE](LICENSE) for details.
+
+---
+
+## Security Hardening Applied
+
+The following security and robustness improvements have been applied to the codebase:
+
+- **Path traversal protection** – All `jobId` parameters are sanitized via `validator.sanitizeJobId()` before use in file paths (`reportController.js`, `uploadController.js`)
+- **AI pipeline correction** – Analysis pipeline now correctly invokes `aiEngine.py` (LLM integration) instead of the heuristic-only `severityClassifier.py`
+- **Cppcheck XML parser fix** – Error-location pairing rewritten to prevent misalignment between `<error>` and `<location>` elements
+- **Centralized path resolution** – Upload and report directory paths are resolved to absolute paths in `config.js`, eliminating fragile relative path computation across multiple files
+- **Windows tool discovery** – `cCompiler.js` automatically discovers GCC, G++, and Cppcheck in common Windows installation directories (MinGW, MSYS2, TDM-GCC)
+- **Python tool invocation** – Pylint and Bandit are invoked via `python -m pylint` / `python -m bandit` for cross-platform compatibility
+- **Dockerfile PEP 668** – Added `--break-system-packages` flag for Python 3.11+ compatibility
+- **Logger paths** – Log file paths are now resolved relative to the project root, not the current working directory
 
 ---
 
