@@ -1,0 +1,32 @@
+{
+  "job_id": "28715b66-f67c-43bd-b9b1-0665a7e9b865",
+  "file": "28715b66-f67c-43bd-b9b1-0665a7e9b865.cpp",
+  "language": "cpp",
+  "findings": [
+    {
+      "tool": "gcc",
+      "rule_id": "-Wreturn-local-addr",
+      "cwe": null,
+      "owasp": null,
+      "severity": "medium",
+      "line": 49,
+      "column": 9,
+      "message": "address of local variable 'arr' returned",
+      "ai_verdict": "true_positive",
+      "ai_severity": "medium",
+      "ai_explanation": "Heuristic classification based on rule: address of local variable 'arr' returned",
+      "ai_remediation": "Review and fix the flagged code according to secure coding guidelines.",
+      "ai_confidence": 0.6
+    }
+  ],
+  "risk_score": 95,
+  "risk_grade": "Secure",
+  "severity_counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0,
+    "info": 0
+  },
+  "deduction_formula": "100 - [(0 × 15) + (0 × 10) + (1 × 5) + (0 × 2)] = 95"
+}

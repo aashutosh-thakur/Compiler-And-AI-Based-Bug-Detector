@@ -11,3 +11,5 @@
 2026-03-04 19:28:18 [ERROR] [Sandbox] Process error: spawn cppcheck ENOENT
 2026-03-04 19:28:18 [ERROR] GCC execution failed: spawn gcc ENOENT
 2026-03-04 19:28:18 [ERROR] Cppcheck execution failed: spawn cppcheck ENOENT
+2026-03-05 09:59:46 [ERROR] [C/C++] Process error: spawn cppcheck ENOENT
+2026-03-05 10:00:01 [ERROR] [C/C++] Process error: spawn cppcheck ENOENT
