@@ -528,7 +528,8 @@ Create a `.env` file in the `backend/` directory:
 
 ```env
 PORT=3000
-OPENAI_API_KEY=your_api_key_here
+GEMINI_API_KEY=your_gemini_api_key_here
+AI_MODEL=gemini-2.0-flash
 SANDBOX_TIMEOUT=60
 
 # Optional overrides (paths are resolved relative to project root)
