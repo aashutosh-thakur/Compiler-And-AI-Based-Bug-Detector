@@ -1,7 +1,7 @@
 /**
  * reportViewer.js – Fetches report JSON and renders findings, OWASP map, risk score
  *
- * AI Bug Detection System
+ * Compiler & AI Based Bug-Detector
  */
 
 'use strict';

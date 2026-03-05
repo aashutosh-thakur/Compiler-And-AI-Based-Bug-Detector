@@ -1,7 +1,7 @@
 {
   "name": "ai-bug-detection-system",
   "version": "1.0.0",
-  "description": "Compiler-Based AI Bug Detector – Express backend with async analysis pipeline",
+  "description": "Compiler & AI Based Bug-Detector – Express backend with async analysis pipeline",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

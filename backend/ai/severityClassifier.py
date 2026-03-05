@@ -1,7 +1,7 @@
 """
 severityClassifier.py – ML-based or heuristic severity classifier
 
-AI Bug Detection System
+Compiler & AI Based Bug-Detector
 
 This module provides contextual severity classification for SAST findings.
 It can be used as a standalone classifier or invoked from the AI engine.

@@ -1,7 +1,7 @@
 /**
  * main.js – App boot, API fetch wrappers, shared utilities
  *
- * AI Bug Detection System
+ * Compiler & AI Based Bug-Detector
  */
 
 'use strict';
@@ -95,8 +95,8 @@ function $$(selector, parent = document) {
 /**
  * Show / hide an element by toggling the `hidden` class.
  */
-function show(el)  { el?.classList.remove('hidden'); }
-function hide(el)  { el?.classList.add('hidden'); }
+function show(el) { el?.classList.remove('hidden'); }
+function hide(el) { el?.classList.add('hidden'); }
 function toggle(el, visible) { visible ? show(el) : hide(el); }
 
 /* ---------- Formatting Helpers ---------- */
@@ -107,7 +107,7 @@ function toggle(el, visible) { visible ? show(el) : hide(el); }
  * @returns {string}
  */
 function formatSize(bytes) {
-  if (bytes < 1024)        return `${bytes} B`;
+  if (bytes < 1024) return `${bytes} B`;
   if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
   return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
 }
@@ -119,10 +119,10 @@ function formatSize(bytes) {
  */
 function langFromExt(ext) {
   const map = {
-    '.c':   'C',
+    '.c': 'C',
     '.cpp': 'C++',
-    '.h':   'C/C++ Header',
-    '.py':  'Python',
+    '.h': 'C/C++ Header',
+    '.py': 'Python',
   };
   return map[ext.toLowerCase()] || 'Unknown';
 }
@@ -144,20 +144,20 @@ const SEVERITY_ORDER = ['critical', 'high', 'medium', 'low', 'info'];
 function severityBadgeClass(severity) {
   switch ((severity || '').toLowerCase()) {
     case 'critical': return 'badge--danger';
-    case 'high':     return 'badge--danger';
-    case 'medium':   return 'badge--warning';
-    case 'low':      return 'badge--info';
-    default:         return 'badge--info';
+    case 'high': return 'badge--danger';
+    case 'medium': return 'badge--warning';
+    case 'low': return 'badge--info';
+    default: return 'badge--info';
   }
 }
 
 function riskGradeInfo(score) {
-  if (score >= 80) return { grade: 'Secure',        cls: 'risk-gauge--secure',  badge: 'badge--success' };
-  if (score >= 50) return { grade: 'Moderate Risk',  cls: 'risk-gauge--moderate', badge: 'badge--warning' };
-  return                   { grade: 'High Risk',      cls: 'risk-gauge--danger',  badge: 'badge--danger'  };
+  if (score >= 80) return { grade: 'Secure', cls: 'risk-gauge--secure', badge: 'badge--success' };
+  if (score >= 50) return { grade: 'Moderate Risk', cls: 'risk-gauge--moderate', badge: 'badge--warning' };
+  return { grade: 'High Risk', cls: 'risk-gauge--danger', badge: 'badge--danger' };
 }
 
 /* ---------- Boot ---------- */
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('[AI Bug Detector] main.js loaded');
+  console.log('[Compiler & AI Based Bug-Detector] main.js loaded');
 });

@@ -1,7 +1,7 @@
 """
 riskScore.py – Risk Scoring Engine
 
-AI Bug Detection System
+Compiler & AI Based Bug-Detector
 
 Implements the weighted deduction formula:
   R = 100 - [(Critical × 15) + (High × 10) + (Medium × 5) + (Low × 2)]

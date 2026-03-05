@@ -1,7 +1,7 @@
 /**
  * upload.js – Upload flow, file validation, progress tracking, status polling
  *
- * AI Bug Detection System
+ * Compiler & AI Based Bug-Detector
  */
 
 'use strict';

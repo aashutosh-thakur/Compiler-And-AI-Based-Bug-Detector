@@ -1,7 +1,7 @@
 """
 reportGenerator.py – Generates .docx security assessment reports
 
-AI Bug Detection System
+Compiler & AI Based Bug-Detector
 
 Uses python-docx to create professional, structured reports from
 the canonical JSON analysis output.
@@ -88,7 +88,7 @@ def _add_cover_page(doc: Document, data: Dict):
     doc.add_paragraph("")
     doc.add_paragraph("")
 
-    title = doc.add_heading("AI Bug Detection System", level=0)
+    title = doc.add_heading("Compiler & AI Based Bug-Detector", level=0)
     title.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
     subtitle = doc.add_heading("Security Assessment Report", level=1)

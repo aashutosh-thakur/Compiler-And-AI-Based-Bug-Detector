@@ -1,7 +1,7 @@
 /**
  * server.js – Express entry point
  *
- * AI Bug Detection System
+ * Compiler & AI Based Bug-Detector
  *
  * Sets up middleware, mounts routes, serves the frontend,
  * and starts the HTTP listener.
@@ -57,7 +57,7 @@ app.use((err, _req, res, _next) => {
 /* ---------- Start ---------- */
 const PORT = config.port;
 app.listen(PORT, () => {
-    logger.info(`AI Bug Detection server running on http://localhost:${PORT}`);
+    logger.info(`Compiler & AI Based Bug-Detector running on http://localhost:${PORT}`);
 });
 
 module.exports = app;

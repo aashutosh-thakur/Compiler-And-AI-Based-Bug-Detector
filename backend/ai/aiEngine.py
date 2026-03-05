@@ -1,7 +1,7 @@
 """
 aiEngine.py – Gemini AI wrapper for contextual severity classification
 
-AI Bug Detection System
+Compiler & AI Based Bug-Detector
 
 This module handles communication with the Google Gemini API
 to perform contextual analysis of SAST findings.
