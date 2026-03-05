@@ -1061,3 +1061,14 @@
 2026-03-05 10:51:19 [INFO] GET /js/main.js
 2026-03-05 10:51:19 [INFO] GET /js/reportViewer.js
 2026-03-05 10:51:19 [INFO] GET /api/report/b70e3f2d-28a6-4139-9fcf-cdb91e3597be
+2026-03-05 11:28:50 [INFO] GET /report.html?jobId=b70e3f2d-28a6-4139-9fcf-cdb91e3597be
+2026-03-05 11:28:50 [INFO] GET /css/style.css
+2026-03-05 11:28:50 [INFO] GET /assets/logo.svg
+2026-03-05 11:28:50 [INFO] GET /js/main.js
+2026-03-05 11:28:50 [INFO] GET /js/reportViewer.js
+2026-03-05 11:28:50 [INFO] GET /api/report/b70e3f2d-28a6-4139-9fcf-cdb91e3597be
+2026-03-05 11:28:50 [INFO] GET /assets/logo.svg
+2026-03-05 11:28:55 [INFO] GET /index.html
+2026-03-05 11:28:55 [INFO] GET /css/style.css
+2026-03-05 11:28:55 [INFO] GET /assets/logo.svg
+2026-03-05 11:28:55 [INFO] GET /js/main.js
