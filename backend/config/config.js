@@ -14,7 +14,7 @@ const projectRoot = path.resolve(__dirname, '..', '..');
 const config = {
     port: parseInt(process.env.PORT, 10) || 3000,
     redisUrl: process.env.REDIS_URL || 'redis://localhost:6379',
-    openaiApiKey: process.env.OPENAI_API_KEY || '',
+    geminiApiKey: process.env.GEMINI_API_KEY || '',
     uploadDir: path.resolve(projectRoot, process.env.UPLOAD_DIR || 'uploads'),
     reportsDir: path.resolve(projectRoot, process.env.REPORTS_DIR || 'reports'),
     sandboxTimeout: parseInt(process.env.SANDBOX_TIMEOUT, 10) || 60,

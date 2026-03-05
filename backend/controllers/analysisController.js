@@ -72,7 +72,7 @@ function runAiClassification(jobId, findings) {
     return new Promise((resolve) => {
         const scriptPath = path.join(__dirname, '..', 'ai', 'aiEngine.py');
         const proc = spawn('python', [scriptPath, '--job-id', jobId], {
-            timeout: config.sandboxTimeout * 1000,
+            timeout: Math.max(config.sandboxTimeout, 300) * 1000, // Min 5 min for AI retries
         });
 
         let stdout = '';

@@ -772,3 +772,119 @@
 2026-03-05 10:07:35 [INFO] GET /js/main.js
 2026-03-05 10:07:35 [INFO] GET /js/reportViewer.js
 2026-03-05 10:07:35 [INFO] GET /api/report/a90f1d50-6d3c-433e-abde-051d2cf41b93
+2026-03-05 10:18:50 [INFO] Running with in-memory job queue (set USE_REDIS=true to enable Redis)
+2026-03-05 10:18:50 [INFO] AI Bug Detection server running on http://localhost:3000
+2026-03-05 10:19:02 [INFO] GET /
+2026-03-05 10:19:02 [INFO] GET /css/style.css
+2026-03-05 10:19:02 [INFO] GET /assets/logo.svg
+2026-03-05 10:19:02 [INFO] GET /js/main.js
+2026-03-05 10:19:03 [INFO] GET /assets/logo.svg
+2026-03-05 10:19:04 [INFO] GET /upload.html
+2026-03-05 10:19:04 [INFO] GET /css/style.css
+2026-03-05 10:19:04 [INFO] GET /js/upload.js
+2026-03-05 10:19:04 [INFO] GET /assets/logo.svg
+2026-03-05 10:19:04 [INFO] GET /js/main.js
+2026-03-05 10:19:12 [INFO] POST /api/upload
+2026-03-05 10:19:12 [INFO] Job enqueued: 3f9ed5f5-9030-4800-a7dd-2932e744d982 (medium_bugs.cpp, cpp)
+2026-03-05 10:19:12 [INFO] [ToolDiscovery] Found gcc at: C:\MinGW\bin\gcc.exe
+2026-03-05 10:19:12 [INFO] [ToolDiscovery] Found g++ at: C:\MinGW\bin\g++.exe
+2026-03-05 10:19:12 [INFO] [ToolDiscovery] Found cppcheck at: C:\Program Files\Cppcheck\cppcheck.exe
+2026-03-05 10:19:12 [INFO] [3f9ed5f5-9030-4800-a7dd-2932e744d982] Starting analysis (cpp)
+2026-03-05 10:19:12 [INFO] [C/C++] Running: C:\MinGW\bin\g++.exe -Wall -Wextra -Wpedantic -fsyntax-only C:\Users\thaku\Downloads\Project\uploads\3f9ed5f5-9030-4800-a7dd-2932e744d982.cpp
+2026-03-05 10:19:12 [INFO] [C/C++] Running: C:\Program Files\Cppcheck\cppcheck.exe --enable=all --inconclusive --force --xml --xml-version=2 C:\Users\thaku\Downloads\Project\uploads\3f9ed5f5-9030-4800-a7dd-2932e744d982.cpp
+2026-03-05 10:19:12 [INFO] [C/C++] Exited with code 0, stdout[96], stderr[6363]
+2026-03-05 10:19:13 [INFO] [C/C++] Exited with code 0, stdout[0], stderr[316]
+2026-03-05 10:19:14 [INFO] GET /api/status/3f9ed5f5-9030-4800-a7dd-2932e744d982
+2026-03-05 10:19:16 [INFO] GET /api/status/3f9ed5f5-9030-4800-a7dd-2932e744d982
+2026-03-05 10:19:18 [INFO] GET /api/status/3f9ed5f5-9030-4800-a7dd-2932e744d982
+2026-03-05 10:19:20 [INFO] GET /api/status/3f9ed5f5-9030-4800-a7dd-2932e744d982
+2026-03-05 10:19:22 [INFO] [3f9ed5f5-9030-4800-a7dd-2932e744d982] Analysis complete – Risk Score: 46
+2026-03-05 10:19:22 [INFO] Report JSON saved: C:\Users\thaku\Downloads\Project\reports\3f9ed5f5-9030-4800-a7dd-2932e744d982.json
+2026-03-05 10:19:22 [INFO] GET /api/status/3f9ed5f5-9030-4800-a7dd-2932e744d982
+2026-03-05 10:19:23 [INFO] Report DOCX saved: C:\Users\thaku\Downloads\Project\reports\3f9ed5f5-9030-4800-a7dd-2932e744d982.docx
+2026-03-05 10:19:23 [INFO] [InMemory] Job 3f9ed5f5-9030-4800-a7dd-2932e744d982 completed successfully
+2026-03-05 10:19:24 [INFO] GET /api/status/3f9ed5f5-9030-4800-a7dd-2932e744d982
+2026-03-05 10:19:26 [INFO] GET /report.html?jobId=3f9ed5f5-9030-4800-a7dd-2932e744d982
+2026-03-05 10:19:26 [INFO] GET /css/style.css
+2026-03-05 10:19:26 [INFO] GET /js/reportViewer.js
+2026-03-05 10:19:26 [INFO] GET /assets/logo.svg
+2026-03-05 10:19:26 [INFO] GET /js/main.js
+2026-03-05 10:19:26 [INFO] GET /api/report/3f9ed5f5-9030-4800-a7dd-2932e744d982
+2026-03-05 10:19:47 [INFO] POST /api/upload
+2026-03-05 10:19:47 [INFO] Job enqueued: 4737211e-14da-427d-aaf4-eb2181c83608 (high_bugs.py, python)
+2026-03-05 10:19:47 [INFO] [4737211e-14da-427d-aaf4-eb2181c83608] Starting analysis (python)
+2026-03-05 10:19:47 [INFO] [Sandbox] Running: python -m pylint --output-format=json --disable=C0114,C0115,C0116 C:\Users\thaku\Downloads\Project\uploads\4737211e-14da-427d-aaf4-eb2181c83608.py
+2026-03-05 10:19:47 [INFO] [Sandbox] Running: python -m bandit -f json -ll C:\Users\thaku\Downloads\Project\uploads\4737211e-14da-427d-aaf4-eb2181c83608.py
+2026-03-05 10:19:47 [INFO] [Sandbox] Command exited with code 1
+2026-03-05 10:19:49 [INFO] [Sandbox] Command exited with code 20
+2026-03-05 10:19:58 [INFO] [4737211e-14da-427d-aaf4-eb2181c83608] Analysis complete – Risk Score: 0
+2026-03-05 10:19:58 [INFO] Report JSON saved: C:\Users\thaku\Downloads\Project\reports\4737211e-14da-427d-aaf4-eb2181c83608.json
+2026-03-05 10:19:59 [INFO] Report DOCX saved: C:\Users\thaku\Downloads\Project\reports\4737211e-14da-427d-aaf4-eb2181c83608.docx
+2026-03-05 10:19:59 [INFO] [InMemory] Job 4737211e-14da-427d-aaf4-eb2181c83608 completed successfully
+2026-03-05 10:24:22 [INFO] GET /report.html?jobId=3f9ed5f5-9030-4800-a7dd-2932e744d982
+2026-03-05 10:24:22 [INFO] GET /css/style.css
+2026-03-05 10:24:22 [INFO] GET /assets/logo.svg
+2026-03-05 10:24:22 [INFO] GET /js/main.js
+2026-03-05 10:24:22 [INFO] GET /js/reportViewer.js
+2026-03-05 10:24:22 [INFO] GET /api/report/3f9ed5f5-9030-4800-a7dd-2932e744d982
+2026-03-05 10:24:22 [INFO] GET /assets/logo.svg
+2026-03-05 10:24:23 [INFO] GET /report.html?jobId=3f9ed5f5-9030-4800-a7dd-2932e744d982
+2026-03-05 10:24:23 [INFO] GET /css/style.css
+2026-03-05 10:24:23 [INFO] GET /assets/logo.svg
+2026-03-05 10:24:23 [INFO] GET /js/main.js
+2026-03-05 10:24:23 [INFO] GET /js/reportViewer.js
+2026-03-05 10:24:23 [INFO] GET /api/report/3f9ed5f5-9030-4800-a7dd-2932e744d982
+2026-03-05 10:24:23 [INFO] GET /assets/logo.svg
+2026-03-05 10:24:24 [INFO] GET /report.html?jobId=3f9ed5f5-9030-4800-a7dd-2932e744d982
+2026-03-05 10:24:25 [INFO] GET /css/style.css
+2026-03-05 10:24:25 [INFO] GET /assets/logo.svg
+2026-03-05 10:24:25 [INFO] GET /js/main.js
+2026-03-05 10:24:25 [INFO] GET /js/reportViewer.js
+2026-03-05 10:24:25 [INFO] GET /api/report/3f9ed5f5-9030-4800-a7dd-2932e744d982
+2026-03-05 10:24:25 [INFO] GET /assets/logo.svg
+2026-03-05 10:24:30 [INFO] POST /api/upload
+2026-03-05 10:24:30 [INFO] Job enqueued: 692b93b0-4146-4c01-a01b-a0286536e305 (high_bugs.py, python)
+2026-03-05 10:24:30 [INFO] [692b93b0-4146-4c01-a01b-a0286536e305] Starting analysis (python)
+2026-03-05 10:24:30 [INFO] [Sandbox] Running: python -m pylint --output-format=json --disable=C0114,C0115,C0116 C:\Users\thaku\Downloads\Project\uploads\692b93b0-4146-4c01-a01b-a0286536e305.py
+2026-03-05 10:24:30 [INFO] [Sandbox] Running: python -m bandit -f json -ll C:\Users\thaku\Downloads\Project\uploads\692b93b0-4146-4c01-a01b-a0286536e305.py
+2026-03-05 10:24:31 [INFO] [Sandbox] Command exited with code 1
+2026-03-05 10:24:32 [INFO] [Sandbox] Command exited with code 20
+2026-03-05 10:24:32 [INFO] GET /api/status/692b93b0-4146-4c01-a01b-a0286536e305
+2026-03-05 10:24:34 [INFO] GET /api/status/692b93b0-4146-4c01-a01b-a0286536e305
+2026-03-05 10:24:36 [INFO] GET /api/status/692b93b0-4146-4c01-a01b-a0286536e305
+2026-03-05 10:24:38 [INFO] GET /api/status/692b93b0-4146-4c01-a01b-a0286536e305
+2026-03-05 10:24:40 [INFO] GET /api/status/692b93b0-4146-4c01-a01b-a0286536e305
+2026-03-05 10:24:41 [INFO] [692b93b0-4146-4c01-a01b-a0286536e305] Analysis complete – Risk Score: 0
+2026-03-05 10:24:41 [INFO] Report JSON saved: C:\Users\thaku\Downloads\Project\reports\692b93b0-4146-4c01-a01b-a0286536e305.json
+2026-03-05 10:24:42 [INFO] Report DOCX saved: C:\Users\thaku\Downloads\Project\reports\692b93b0-4146-4c01-a01b-a0286536e305.docx
+2026-03-05 10:24:42 [INFO] [InMemory] Job 692b93b0-4146-4c01-a01b-a0286536e305 completed successfully
+2026-03-05 10:24:42 [INFO] GET /api/status/692b93b0-4146-4c01-a01b-a0286536e305
+2026-03-05 10:24:43 [INFO] GET /report.html?jobId=692b93b0-4146-4c01-a01b-a0286536e305
+2026-03-05 10:24:43 [INFO] GET /css/style.css
+2026-03-05 10:24:43 [INFO] GET /assets/logo.svg
+2026-03-05 10:24:43 [INFO] GET /js/reportViewer.js
+2026-03-05 10:24:43 [INFO] GET /js/main.js
+2026-03-05 10:24:43 [INFO] GET /api/report/692b93b0-4146-4c01-a01b-a0286536e305
+2026-03-05 10:29:09 [INFO] POST /api/upload
+2026-03-05 10:29:09 [INFO] Job enqueued: 13eedcc7-ab11-423a-b471-63aeb58ca740 (low_bugs.c, c)
+2026-03-05 10:29:09 [INFO] [13eedcc7-ab11-423a-b471-63aeb58ca740] Starting analysis (c)
+2026-03-05 10:29:09 [INFO] [C/C++] Running: C:\MinGW\bin\gcc.exe -Wall -Wextra -Wpedantic -fsyntax-only C:\Users\thaku\Downloads\Project\uploads\13eedcc7-ab11-423a-b471-63aeb58ca740.c
+2026-03-05 10:29:09 [INFO] [C/C++] Running: C:\Program Files\Cppcheck\cppcheck.exe --enable=all --inconclusive --force --xml --xml-version=2 C:\Users\thaku\Downloads\Project\uploads\13eedcc7-ab11-423a-b471-63aeb58ca740.c
+2026-03-05 10:29:09 [INFO] [C/C++] Exited with code 0, stdout[94], stderr[6870]
+2026-03-05 10:29:09 [INFO] [C/C++] Exited with code 0, stdout[0], stderr[347]
+2026-03-05 10:29:11 [INFO] GET /api/status/13eedcc7-ab11-423a-b471-63aeb58ca740
+2026-03-05 10:29:13 [INFO] GET /api/status/13eedcc7-ab11-423a-b471-63aeb58ca740
+2026-03-05 10:29:15 [INFO] GET /api/status/13eedcc7-ab11-423a-b471-63aeb58ca740
+2026-03-05 10:29:17 [INFO] GET /api/status/13eedcc7-ab11-423a-b471-63aeb58ca740
+2026-03-05 10:29:19 [INFO] [13eedcc7-ab11-423a-b471-63aeb58ca740] Analysis complete – Risk Score: 65
+2026-03-05 10:29:19 [INFO] Report JSON saved: C:\Users\thaku\Downloads\Project\reports\13eedcc7-ab11-423a-b471-63aeb58ca740.json
+2026-03-05 10:29:19 [INFO] GET /api/status/13eedcc7-ab11-423a-b471-63aeb58ca740
+2026-03-05 10:29:19 [INFO] Report DOCX saved: C:\Users\thaku\Downloads\Project\reports\13eedcc7-ab11-423a-b471-63aeb58ca740.docx
+2026-03-05 10:29:19 [INFO] [InMemory] Job 13eedcc7-ab11-423a-b471-63aeb58ca740 completed successfully
+2026-03-05 10:29:21 [INFO] GET /api/status/13eedcc7-ab11-423a-b471-63aeb58ca740
+2026-03-05 10:29:22 [INFO] GET /report.html?jobId=13eedcc7-ab11-423a-b471-63aeb58ca740
+2026-03-05 10:29:22 [INFO] GET /css/style.css
+2026-03-05 10:29:22 [INFO] GET /assets/logo.svg
+2026-03-05 10:29:22 [INFO] GET /js/main.js
+2026-03-05 10:29:22 [INFO] GET /js/reportViewer.js
+2026-03-05 10:29:22 [INFO] GET /api/report/13eedcc7-ab11-423a-b471-63aeb58ca740

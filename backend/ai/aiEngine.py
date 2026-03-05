@@ -1,30 +1,32 @@
 """
-aiEngine.py – LLM API wrapper for contextual severity classification
+aiEngine.py – Gemini AI wrapper for contextual severity classification
 
 AI Bug Detection System
 
-This module handles communication with the LLM API (e.g., OpenAI, Anthropic)
+This module handles communication with the Google Gemini API
 to perform contextual analysis of SAST findings.
+Falls back to heuristic classification if the API is unavailable.
 """
 
 import os
 import json
 import sys
-from typing import Dict, List, Optional
+import re
+import time
+from typing import Dict, List
 
 
 # Configuration
-API_KEY = os.environ.get("OPENAI_API_KEY", "")
-MODEL = os.environ.get("AI_MODEL", "gpt-4o-mini")
+API_KEY = os.environ.get("GEMINI_API_KEY", "")
+MODEL = os.environ.get("AI_MODEL", "gemini-2.0-flash")
 CONFIDENCE_THRESHOLD = float(os.environ.get("AI_CONFIDENCE_THRESHOLD", "0.7"))
+MAX_RETRIES = 3
+RETRY_DELAY = 5  # seconds between retries on rate limit
 
 
 def build_classification_prompt(finding: Dict) -> str:
     """
     Construct the LLM prompt for a single SAST finding.
-
-    The prompt includes the raw alert, CWE, surrounding code context,
-    and asks the LLM to act as a security reviewer.
     """
     prompt = f"""You are an expert application security engineer reviewing static analysis findings.
 Analyze the following SAST alert and determine:
@@ -48,11 +50,11 @@ Analyze the following SAST alert and determine:
 {finding.get('code_snippet', 'No code snippet available')}
 ```
 
-Respond in JSON format:
+Respond ONLY with a valid JSON object (no markdown, no code fences):
 {{
   "ai_verdict": "true_positive" or "false_positive",
   "ai_severity": "critical" | "high" | "medium" | "low",
-  "owasp": "A01: Broken Access Control" | ...,
+  "owasp": "A01: Broken Access Control" | "A02: Cryptographic Failures" | "A03: Injection" | ...,
   "ai_explanation": "...",
   "ai_remediation": "...",
   "ai_confidence": 0.0 - 1.0
@@ -64,13 +66,11 @@ Respond in JSON format:
 def classify_finding(finding: Dict) -> Dict:
     """
     Send a finding to the LLM for classification.
-
     Falls back to heuristic classification if API is unavailable.
     """
     try:
-        # Attempt LLM API call
         if API_KEY:
-            return _call_llm_api(finding)
+            return _call_gemini_api(finding)
         else:
             return _heuristic_classify(finding)
     except Exception as e:
@@ -83,7 +83,8 @@ def classify_findings(findings: List[Dict]) -> List[Dict]:
     Classify a batch of findings, filtering out low-confidence false positives.
     """
     classified = []
-    for finding in findings:
+
+    for i, finding in enumerate(findings):
         result = classify_finding(finding)
         finding.update(result)
 
@@ -94,38 +95,73 @@ def classify_findings(findings: List[Dict]) -> List[Dict]:
 
         classified.append(finding)
 
+        # Rate limit: small delay between API calls to avoid quota issues
+        if API_KEY and i < len(findings) - 1:
+            time.sleep(1)
+
     return classified
 
 
-def _call_llm_api(finding: Dict) -> Dict:
+def _call_gemini_api(finding: Dict) -> Dict:
     """
-    Call the OpenAI-compatible API.
+    Call the Google Gemini API using the new google-genai SDK.
+    Includes retry logic for rate limiting.
     """
     try:
-        import openai
+        from google import genai
 
-        client = openai.OpenAI(api_key=API_KEY)
+        client = genai.Client(api_key=API_KEY)
         prompt = build_classification_prompt(finding)
 
-        response = client.chat.completions.create(
-            model=MODEL,
-            messages=[
-                {"role": "system", "content": "You are an expert security code reviewer."},
-                {"role": "user", "content": prompt},
-            ],
-            temperature=0.1,
-            max_tokens=500,
-            response_format={"type": "json_object"},
-        )
+        for attempt in range(MAX_RETRIES):
+            try:
+                response = client.models.generate_content(
+                    model=MODEL,
+                    contents=prompt,
+                    config={
+                        "temperature": 0.1,
+                        "max_output_tokens": 500,
+                        "response_mime_type": "application/json",
+                    },
+                )
 
-        result = json.loads(response.choices[0].message.content)
-        return result
+                text = response.text.strip()
+
+                # Remove code fences if present
+                if text.startswith("```"):
+                    text = re.sub(r"^```(?:json)?\s*", "", text)
+                    text = re.sub(r"\s*```$", "", text)
+
+                result = json.loads(text)
+
+                # Validate required fields
+                required = {"ai_verdict", "ai_severity", "ai_explanation",
+                            "ai_remediation", "ai_confidence"}
+                if not required.issubset(result.keys()):
+                    print(f"[AI Engine] Gemini response missing fields", file=sys.stderr)
+                    return _heuristic_classify(finding)
+
+                return result
+
+            except Exception as e:
+                error_msg = str(e)
+                if "429" in error_msg or "quota" in error_msg.lower() or "rate" in error_msg.lower():
+                    wait = RETRY_DELAY * (attempt + 1)
+                    print(f"[AI Engine] Rate limited, retrying in {wait}s (attempt {attempt + 1}/{MAX_RETRIES})",
+                          file=sys.stderr)
+                    time.sleep(wait)
+                else:
+                    raise  # Non-rate-limit error, don't retry
+
+        # All retries exhausted
+        print(f"[AI Engine] Rate limit retries exhausted, using heuristics", file=sys.stderr)
+        return _heuristic_classify(finding)
 
     except ImportError:
-        print("[AI Engine] openai package not installed, using heuristics", file=sys.stderr)
+        print("[AI Engine] google-genai not installed, using heuristics", file=sys.stderr)
         return _heuristic_classify(finding)
     except Exception as e:
-        print(f"[AI Engine] API error: {e}", file=sys.stderr)
+        print(f"[AI Engine] Gemini API error: {e}", file=sys.stderr)
         return _heuristic_classify(finding)
 
 
@@ -139,7 +175,7 @@ def _heuristic_classify(finding: Dict) -> Dict:
 
     # Map known critical CWEs
     critical_cwes = {"CWE-89", "CWE-78", "CWE-798", "CWE-502"}
-    high_cwes = {"CWE-79", "CWE-352", "CWE-22", "CWE-476", "CWE-119", "CWE-120"}
+    high_cwes = {"CWE-79", "CWE-352", "CWE-22", "CWE-476", "CWE-119", "CWE-120", "CWE-327"}
 
     if cwe in critical_cwes:
         ai_severity = "critical"
